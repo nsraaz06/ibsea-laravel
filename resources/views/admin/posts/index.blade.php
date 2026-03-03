@@ -21,6 +21,43 @@
         </div>
     @endif
 
+    <!-- Search & Filters -->
+    <div class="bg-white p-8 rounded-[3rem] shadow-premium mb-10 border border-slate-100">
+        <form action="{{ route('admin.posts.index') }}" method="GET" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div class="md:col-span-2">
+                <label class="text-[10px] font-black text-primary uppercase tracking-widest mb-2 block px-1">Search Dispatch</label>
+                <div class="relative">
+                    <input type="text" name="search" value="{{ request('search') }}" placeholder="Search by title..." class="w-full bg-slate-50 border-none rounded-2xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/10 transition-all text-slate-800 placeholder:text-slate-300">
+                    <span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 text-lg">search</span>
+                </div>
+            </div>
+
+            <div>
+                <label class="text-[10px] font-black text-primary uppercase tracking-widest mb-2 block px-1">Category</label>
+                <select name="category" onchange="this.form.submit()" class="w-full bg-slate-50 border-none rounded-2xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/10 transition-all text-slate-800 appearance-none cursor-pointer">
+                    <option value="">All Categories</option>
+                    <option value="News" {{ request('category') === 'News' ? 'selected' : '' }}>News</option>
+                    <option value="Blog" {{ request('category') === 'Blog' ? 'selected' : '' }}>Blog</option>
+                    <option value="Announcement" {{ request('category') === 'Announcement' ? 'selected' : '' }}>Announcement</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="text-[10px] font-black text-primary uppercase tracking-widest mb-2 block px-1">Status</label>
+                <select name="status" onchange="this.form.submit()" class="w-full bg-slate-50 border-none rounded-2xl px-12 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/10 transition-all text-slate-800 appearance-none cursor-pointer">
+                    <option value="">All Status</option>
+                    <option value="Published" {{ request('status') === 'Published' ? 'selected' : '' }}>Published</option>
+                    <option value="Draft" {{ request('status') === 'Draft' ? 'selected' : '' }}>Draft</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="text-[10px] font-black text-primary uppercase tracking-widest mb-2 block px-1">Posting Date</label>
+                <input type="date" name="date" value="{{ request('date') }}" onchange="this.form.submit()" class="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 text-sm font-bold focus:ring-4 focus:ring-primary/10 transition-all text-slate-800 cursor-pointer">
+            </div>
+        </form>
+    </div>
+
     <div class="bg-white rounded-[2.5rem] shadow-premium border border-slate-100 overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">
@@ -38,11 +75,15 @@
                     <tr class="hover:bg-slate-50/50 transition-colors group">
                         <td class="px-8 py-6">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center shrink-0">
-                                    <span class="material-icons text-slate-400">article</span>
+                                <div class="w-16 h-10 bg-slate-100 rounded-lg flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                                    @if($post->featured_image)
+                                        <img src="{{ asset($post->featured_image) }}" class="w-full h-full object-cover" alt="{{ $post->title }}">
+                                    @else
+                                        <span class="material-icons text-slate-200 text-sm">image</span>
+                                    @endif
                                 </div>
                                 <div>
-                                    <div class="text-sm font-bold text-slate-800 line-clamp-1">{{ $post->title }}</div>
+                                    <div class="text-sm font-bold text-slate-800 line-clamp-1 truncate max-w-xs">{{ $post->title }}</div>
                                     <div class="text-[10px] text-slate-400 font-bold uppercase mt-0.5">{{ $post->created_at->format('d M, Y') }}</div>
                                 </div>
                             </div>

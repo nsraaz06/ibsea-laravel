@@ -24,9 +24,32 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = \App\Models\Post::latest()->paginate(20);
+        $query = \App\Models\Post::query();
+
+        // Search by Title
+        if ($request->filled('search')) {
+            $query->where('title', 'like', '%' . $request->search . '%');
+        }
+
+        // Filter by Category
+        if ($request->filled('category')) {
+            $query->where('category', $request->category);
+        }
+
+        // Filter by Status
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        // Filter by Date
+        if ($request->filled('date')) {
+            $query->whereDate('created_at', $request->date);
+        }
+
+        $posts = $query->latest()->paginate(20)->withQueryString();
+        
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -123,8 +146,12 @@ class PostController extends Controller
 
         $data['show_on_slider'] = $request->has('show_on_slider');
         
-        if ($request->status === 'Published' && !$post->published_at) {
-            $data['published_at'] = now();
+        if ($request->status === 'Published') {
+            if (!$post->published_at) {
+                $data['published_at'] = now();
+            }
+        } else {
+            $data['published_at'] = null;
         }
 
         $post->update($data);

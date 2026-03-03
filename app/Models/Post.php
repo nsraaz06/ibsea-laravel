@@ -15,6 +15,7 @@ class Post extends Model
         'slug',
         'category',
         'content',
+        'status',
         'featured_image',
         'show_on_slider',
         'published_at',
