@@ -1,10 +1,11 @@
 const CACHE_NAME = 'ibsea-v1';
 const ASSETS = [
     '/',
-    '/css/app.css',
-    '/js/app.js',
+    '/?utm_source=pwa',
+    '/css/global.css',
     '/ibsea-text-33w-600x83.png.webp',
-    '/pwa-192x192.png'
+    '/pwa-192x192.png',
+    '/pwa-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {

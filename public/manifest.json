@@ -1,23 +1,68 @@
 {
     "name": "International Business Strategic Alliance",
     "short_name": "IBSEA",
+    "id": "/?utm_source=pwa",
+    "description": "Global Hub for International Business Startups & Entrepreneurs",
+    "categories": [
+        "business",
+        "networking"
+    ],
     "icons": [
         {
             "src": "/pwa-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
+        },
+        {
+            "src": "/pwa-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
         },
         {
             "src": "/pwa-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
+        },
+        {
+            "src": "/pwa-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ],
-    "start_url": "/",
+    "start_url": "/?utm_source=pwa",
+    "scope": "/",
     "background_color": "#004a95",
     "theme_color": "#004a95",
     "display": "standalone",
-    "orientation": "portrait"
+    "display_override": [
+        "standalone",
+        "minimal-ui"
+    ],
+    "orientation": "portrait",
+    "shortcuts": [
+        {
+            "name": "Events",
+            "url": "/events",
+            "icons": [
+                {
+                    "src": "/pwa-192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Membership",
+            "url": "/membership",
+            "icons": [
+                {
+                    "src": "/pwa-192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
 }

@@ -13,12 +13,15 @@
 
 <!-- PWA Primary Meta Tags -->
 <meta name="theme-color" content="#004a95">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="IBSEA">
 <link rel="manifest" href="{{ asset('manifest.json') }}">
 
 <!-- iOS Meta Tags -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="IBSEA">
+<meta name="format-detection" content="telephone=no">
 
 <!-- Service Worker Registration -->
 <script>

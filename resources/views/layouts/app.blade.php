@@ -40,6 +40,7 @@
         @include('partials.footer')
     @endif
 
+    @include('partials.pwa_prompt')
     @stack('scripts')
 </body>
 </html>
