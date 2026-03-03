@@ -1,0 +1,4 @@
+{
+    "/js/app.js": "/js/include.js",
+    "/css/app.css": "/css/global.css"
+}

@@ -1,0 +1,80 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* IBSEA Global Design System */
+:root {
+    /* Primary Colors */
+    --color-primary: #f6790b;
+    --color-primary-soft: rgba(246, 121, 11, 0.1);
+    --color-secondary: #0F172A;
+
+    /* Semantic Colors (Light Mode Default) */
+    --bg-main: #f8f7f5;
+    --bg-surface: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #f1f5f9;
+
+    /* Gradients */
+    --gold-gradient: linear-gradient(to right, #C5A059, #E6C88B, #C5A059);
+    --orange-gradient: linear-gradient(135deg, #f6790b 0%, #f97316 100%);
+
+    /* Layout Tokens */
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 2.5rem;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Dark Mode Tokens */
+.dark {
+    --bg-main: #020617;
+    --bg-surface: #0f172a;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+}
+
+/* Base Adjustments */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Public Sans', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Unified Components */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dark .glass-nav {
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.gold-gradient-text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Standard Rounded utility if needs override from tailwind ones */
+.rounded-mission {
+    border-radius: var(--radius-3xl);
+}

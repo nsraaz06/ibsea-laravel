@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IBSEA My Membership &amp; Credentials</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f49bd",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "gold": "#D4AF37",
+                        "orange-corp": "#f58220",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        .certificate-bg {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+        }
+
+        .id-card-gradient {
+            background: linear-gradient(145deg, #0f49bd 0%, #072a72 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 bg-white dark:bg-background-dark border-r border-primary/10 flex flex-col hidden lg:flex">
+            <div class="p-6 border-b border-primary/10">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+                        <span class="material-icons text-xl">account_balance</span>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-primary dark:text-white">IBSEA</span>
+                </div>
+            </div>
+            <nav class="flex-1 p-4 space-y-2 overflow-y-auto">
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-primary/5 transition-colors"
+                    href="#">
+                    <span class="material-icons">dashboard</span>
+                    <span class="font-medium">Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary dark:text-white transition-colors"
+                    href="#">
+                    <span class="material-icons">badge</span>
+                    <span class="font-medium">My Membership</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-primary/5 transition-colors"
+                    href="#">
+                    <span class="material-icons">workspace_premium</span>
+                    <span class="font-medium">Rewards</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-primary/5 transition-colors"
+                    href="#">
+                    <span class="material-icons">event</span>
+                    <span class="font-medium">Events</span>
+                </a>
+                <div class="pt-4 pb-2 px-4 uppercase text-xs font-bold text-slate-400 tracking-wider">Settings</div>
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-primary/5 transition-colors"
+                    href="#">
+                    <span class="material-icons">person_outline</span>
+                    <span class="font-medium">Profile</span>
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-primary/5 transition-colors"
+                    href="#">
+                    <span class="material-icons">settings</span>
+                    <span class="font-medium">General Settings</span>
+                </a>
+            </nav>
+            <div class="p-4 border-t border-primary/10">
+                <div class="flex items-center gap-3 p-3 bg-primary/5 rounded-xl">
+                    <img alt="Member Photo" class="w-10 h-10 rounded-full border-2 border-primary/20"
+                        data-alt="Corporate headshot of a male professional"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyOan8uxBgnBbWCkAjMOcEC_SQaRANvsXj9UhgmGnDBzUWLzkVykDia5_Y_WUlrDokT71CH_pzkorfkxtfqM-m0WQGJIgukFmTk8jBQagfRMLysUOHHvyBzfLJSkpNoRtqWUk5BMhZO8wOBzSnbohq0OizGFeCbutv4KPPnT49gujs-ECzJsVYEwUOe0bmWZPxcGGq8QctXounwGUGhW4Kymwxz6d6dKIHMmeGkqzo2PzyiekLFgE4--cryvHgcjjoB2LkRrLAQrM" />
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-semibold truncate">Dr. Arjun Sharma</p>
+                        <p class="text-xs text-slate-500 truncate uppercase">ID: IBS-2024-901</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark/50">
+            <!-- Header Bar -->
+            <header
+                class="h-16 bg-white dark:bg-background-dark/80 backdrop-blur border-b border-primary/10 flex items-center justify-between px-8 sticky top-0 z-10">
+                <h1 class="text-xl font-bold">My Membership &amp; Credentials</h1>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-primary/5 rounded-full relative">
+                        <span class="material-icons">notifications_none</span>
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-orange-corp rounded-full"></span>
+                    </button>
+                    <div class="h-8 w-px bg-primary/10"></div>
+                    <button
+                        class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors">
+                        <span class="material-icons text-sm">support_agent</span>
+                        Contact Support
+                    </button>
+                </div>
+            </header>
+            <div class="p-8 max-w-7xl mx-auto space-y-8">
+                <!-- Membership Overview Header -->
+                <section class="bg-white dark:bg-background-dark border border-primary/10 rounded-xl p-6 shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 bg-gold/10 rounded-xl flex items-center justify-center text-gold">
+                                <span class="material-icons text-4xl">military_tech</span>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-3">
+                                    <h2 class="text-2xl font-bold">Membership Overview</h2>
+                                    <span
+                                        class="px-3 py-1 bg-gold/20 text-gold border border-gold/30 text-xs font-bold rounded-full uppercase tracking-wider">Lifetime
+                                        Member</span>
+                                </div>
+                                <p class="text-slate-500 dark:text-slate-400 mt-1">Authorized member of India Business
+                                    &amp; Sustainability Excellence Association</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 md:flex gap-4 md:gap-8">
+                            <div class="text-center md:text-right">
+                                <p class="text-xs text-slate-400 uppercase font-bold tracking-widest">Joined Date</p>
+                                <p class="text-lg font-semibold">12 Mar 2021</p>
+                            </div>
+                            <div class="text-center md:text-right">
+                                <p class="text-xs text-slate-400 uppercase font-bold tracking-widest">Renewal Date</p>
+                                <p class="text-lg font-semibold text-gold">N/A (Lifetime)</p>
+                            </div>
+                            <div class="text-center md:text-right">
+                                <p class="text-xs text-slate-400 uppercase font-bold tracking-widest">Status</p>
+                                <div class="flex items-center gap-1 justify-end">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                    <p class="text-lg font-semibold text-green-500">Active</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Credentials Section -->
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+                    <!-- Digital ID Card (Col-4) -->
+                    <div class="xl:col-span-4 space-y-4">
+                        <h3 class="text-lg font-bold flex items-center gap-2 px-1">
+                            <span class="material-icons text-primary">contact_mail</span>
+                            Digital ID Card
+                        </h3>
+                        <div class="relative group">
+                            <!-- ID Card Front -->
+                            <div
+                                class="id-card-gradient w-full max-w-sm mx-auto aspect-[1/1.58] rounded-2xl shadow-2xl p-6 text-white relative overflow-hidden border border-white/10">
+                                <!-- Background Accents -->
+                                <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-3xl">
+                                </div>
+                                <div
+                                    class="absolute -bottom-24 -left-24 w-64 h-64 bg-orange-corp/10 rounded-full blur-3xl">
+                                </div>
+                                <div class="flex flex-col h-full relative z-10">
+                                    <div class="flex justify-between items-start mb-8">
+                                        <div class="flex flex-col">
+                                            <span
+                                                class="text-[10px] font-bold tracking-[0.2em] opacity-80 uppercase">Official
+                                                Member</span>
+                                            <span class="text-lg font-extrabold tracking-tight">IBSEA</span>
+                                        </div>
+                                        <div class="text-right">
+                                            <div
+                                                class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold border border-white/20">
+                                                VALID UNTIL: LIFE</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-center flex-1 space-y-4">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-gold/30 blur-lg rounded-full animate-pulse">
+                                            </div>
+                                            <img alt="Member Photo"
+                                                class="w-32 h-32 rounded-full border-4 border-white object-cover relative z-10"
+                                                data-alt="Portrait of a smiling professional in a suit"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuIdg241H7jkPanGRcvogUuYOPtzlN3VXNbFXBUNS5zFScMYsb5CqwJDw_SGAYZIq9v1UkQZxv5rmvzvWXy_KuYsMoNTL-cCI9Ue8zRrTpThiq5fPwJKa-vsZWKIbwXj6j7nZuGtH-jVzSGqYtu07nfGCrBuG8bcoheJexb-zHrcZv9WboO-CynLIJ_GakVQCGGT6E9g6ykb-6_eY4Zjeyfu9PgG8fpPATuLmyFh0ShfNHlkNvpi7M_oIRL5OznguqYsUP8wJOzig" />
+                                        </div>
+                                        <div class="text-center">
+                                            <h4 class="text-xl font-bold tracking-tight">Dr. Arjun Sharma</h4>
+                                            <p class="text-sm font-medium text-orange-corp/90">Lifetime Member Associate
+                                            </p>
+                                        </div>
+                                        <div class="grid grid-cols-2 w-full gap-4 pt-4">
+                                            <div class="text-center">
+                                                <p class="text-[9px] text-white/60 uppercase font-bold tracking-wider">
+                                                    Member ID</p>
+                                                <p class="text-sm font-mono font-bold tracking-widest">IBS-2024-901</p>
+                                            </div>
+                                            <div class="text-center">
+                                                <p class="text-[9px] text-white/60 uppercase font-bold tracking-wider">
+                                                    Designation</p>
+                                                <p class="text-sm font-bold truncate">Project Director</p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded-lg mt-4">
+                                            <div
+                                                class="w-24 h-24 bg-slate-100 flex items-center justify-center border-2 border-slate-200">
+                                                <!-- Mock QR Code using CSS grid -->
+                                                <div class="grid grid-cols-5 gap-1">
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-100"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                    <div class="w-3 h-3 bg-slate-900"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-auto border-t border-white/10 pt-4 flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <img src="{{ asset('image/logo.png') }}" alt="" class="w-12 h-12">
+                                        </div>
+                                        <div class="flex gap-1 items-center">
+                                            <span class="material-icons text-[12px] text-green-400">verified</span>
+                                            <span
+                                                class="text-[8px] font-bold opacity-80 uppercase tracking-widest">Verified</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition-all">
+                            <span class="material-icons">picture_as_pdf</span>
+                            Download Digital ID (PDF)
+                        </button>
+                    </div>
+                    <!-- Official Certificate (Col-8) -->
+                    <div class="xl:col-span-8 space-y-4">
+                        <h3 class="text-lg font-bold flex items-center gap-2 px-1">
+                            <span class="material-icons text-gold">card_membership</span>
+                            Membership Certificate
+                        </h3>
+                        <div
+                            class="certificate-bg border-8 border-gold/30 rounded-xl overflow-hidden shadow-2xl p-10 relative">
+                            <!-- Inner Border -->
+                            <div class="absolute inset-4 border-2 border-gold/20 pointer-events-none"></div>
+                            <div class="relative z-10 text-slate-900 text-center space-y-6">
+                                <div class="flex justify-center mb-4">
+                                    <div class="w-24 h-24 rounded-full border-4 border-gold/20 p-2">
+                                        <div
+                                            class="w-full h-full bg-primary rounded-full flex items-center justify-center text-white">
+                                            <span class="material-icons text-4xl">account_balance</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-1">
+                                    <h2 class="text-2xl font-black tracking-widest text-primary uppercase">Certificate
+                                        of Membership</h2>
+                                    <p class="text-sm font-bold text-slate-500 tracking-tight">INDIA BUSINESS &amp;
+                                        SUSTAINABILITY EXCELLENCE ASSOCIATION</p>
+                                </div>
+                                <div class="py-4">
+                                    <p class="italic text-slate-600 font-medium">This is to officially certify that</p>
+                                    <h1
+                                        class="text-4xl font-serif font-bold text-slate-900 my-4 border-b-2 border-primary/10 inline-block px-8 pb-2">
+                                        Dr. Arjun Sharma</h1>
+                                    <p class="max-w-xl mx-auto text-sm leading-relaxed text-slate-600 mt-4">
+                                        Has been duly admitted as a <strong>Lifetime Member Associate</strong> of the
+                                        Association and is entitled to all the privileges and honors appertaining
+                                        thereto under the bylaws and regulations of the Board.
+                                    </p>
+                                </div>
+                                <div class="grid grid-cols-3 gap-8 pt-8">
+                                    <div class="flex flex-col items-center">
+                                        <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-4">
+                                            Issue Date</p>
+                                        <p class="text-sm font-bold text-slate-800">MARCH 12, 2021</p>
+                                        <div class="w-24 h-px bg-slate-300 mt-1"></div>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-20 h-20 bg-gold/5 rounded-full flex items-center justify-center border-2 border-gold/20 shadow-inner">
+                                            <span class="material-icons text-gold/40 text-4xl">verified_user</span>
+                                        </div>
+                                        <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mt-2">
+                                            OFFICIAL SEAL</p>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-2">
+                                            Chairman</p>
+                                        <div
+                                            class="h-10 flex items-center italic font-serif text-xl text-slate-700 opacity-80">
+                                            V.K. Singh
+                                        </div>
+                                        <div class="w-24 h-px bg-slate-300 mt-1"></div>
+                                        <p class="text-[10px] mt-1 font-bold text-slate-500">Board of Trustees</p>
+                                    </div>
+                                </div>
+                                <div class="pt-6">
+                                    <p class="text-[9px] text-slate-400 font-mono">CERTIFICATE AUTHENTICITY ID:
+                                        IBSEA-LMA-2021-0034-77</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button
+                                class="flex-1 flex items-center justify-center gap-2 bg-gold hover:bg-gold/90 text-white font-bold py-4 px-6 rounded-xl shadow-lg transition-all">
+                                <span class="material-icons">file_download</span>
+                                Download High-Res Certificate
+                            </button>
+                            <button
+                                class="flex items-center justify-center gap-2 border-2 border-primary/20 hover:border-primary text-primary dark:text-white font-bold py-4 px-8 rounded-xl transition-all">
+                                <span class="material-icons">share</span>
+                                Share on LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer / Legal Section -->
+                <footer class="pt-8 border-t border-primary/10">
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+                        <p>© 2024 India Business &amp; Sustainability Excellence Association. All rights reserved.</p>
+                        <div class="flex items-center gap-6">
+                            <a class="hover:text-primary transition-colors" href="#">Credential Privacy Policy</a>
+                            <a class="hover:text-primary transition-colors" href="#">Verify Credential Online</a>
+                            <a class="hover:text-primary transition-colors" href="#">Contact Registrar</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

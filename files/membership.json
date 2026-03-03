@@ -1,0 +1,176 @@
+[
+    {
+        "id": "booster",
+        "title": "Booster Membership",
+        "tagline": "Start Growing Your Business with IBSEA",
+        "fee_numeric": 1999,
+        "validity_days": 365,
+        "benefits_json": [
+            "Access to IBSEA conferences and selected networking meetups",
+            "Exclusive WhatsApp community access",
+            "50 hours business growth training annually",
+            "Discount coupons for conclaves and meetups",
+            "E-Certificate and Membership ID Card",
+            "10% discount on Vyapar Badhao services"
+        ],
+        "highlights_json": [
+            "Networking Opportunities",
+            "Business Growth Training",
+            "Community Access"
+        ],
+        "stats_json": [
+            "3 Conference & Meetup Access",
+            "Private Community Access",
+            "50+ Hours Annual Training",
+            "Exclusive Event Discounts",
+            "Official Membership ID",
+            "10% Service Savings"
+        ],
+        "theme": "primary"
+    },
+    {
+        "id": "corporate-booster",
+        "title": "Corporate Booster Membership",
+        "tagline": "Strengthen Your Brand. Expand Your Reach.",
+        "fee_numeric": 4999,
+        "validity_days": 365,
+        "benefits_json": [
+            "Accreditation Certificate and Company ID Card",
+            "Exclusive WhatsApp business network access",
+            "Company logo display on IBSEA website",
+            "Personalized promotional video",
+            "Access to Director & Mentors Conclave",
+            "Access to Growth Exchange Programs",
+            "Access to Bharat Ke Maharathi Awards",
+            "Round table speaking opportunity",
+            "10% discount on Vyapar Badhao services",
+            "1 Brand Strategy Meeting",
+            "50 Hours Virtual Strategic Mentorship"
+        ],
+        "highlights_json": [
+            "Website Logo Visibility",
+            "High-Impact Networking",
+            "Strategic Mentorship"
+        ],
+        "stats_json": [
+            "Website Logo Promotion",
+            "3 Premium Event Access",
+            "50 Hours Mentorship",
+            "Brand Strategy Session",
+            "Round Table Recognition",
+            "10% Business Discount"
+        ],
+        "theme": "secondary"
+    },
+    {
+        "id": "corporate-prime",
+        "title": "Corporate Prime Membership",
+        "tagline": "Premium Visibility. Strategic Connections.",
+        "fee_numeric": 100000,
+        "validity_days": 365,
+        "benefits_json": [
+            "5 B2B and B2G Meetups",
+            "13 Program Access per year",
+            "5 Meetings with IBSEA Core Team",
+            "4 Business Leads (National/Global)",
+            "25,000 Bulk Messages",
+            "IBSEA Business Kit",
+            "Stage sharing in 5 conferences",
+            "Logo promotion across IBSEA platforms",
+            "1 Excellence Award opportunity",
+            "Promotion on IBSEA platforms",
+            "Business feature in IBSEA magazine",
+            "3 Podcast features",
+            "Pan-India network access",
+            "Access to diplomatic and government meetings",
+            "10% discount on Vyapar Badhao services"
+        ],
+        "highlights_json": [
+            "B2B & B2G Meetups",
+            "Business Leads",
+            "Award & Stage Recognition"
+        ],
+        "stats_json": [
+            "5 B2B/B2G Meetups",
+            "4 Qualified Business Leads",
+            "13 Annual Program Access",
+            "Stage Presentation Rights",
+            "National Brand Promotion",
+            "Government-Level Access"
+        ],
+        "theme": "gold"
+    },
+    {
+        "id": "lifetime",
+        "title": "Lifetime Membership",
+        "tagline": "Secure Long-Term Growth Until 2047",
+        "fee_numeric": 25000,
+        "validity_days": 8035,
+        "benefits_json": [
+            "10 yearly passes to IBSEA events",
+            "50 hours business training annually",
+            "10% discount on Vyapar Badhao services",
+            "Name featured on IBSEA website",
+            "IBSEA Business Kit",
+            "Speaking opportunity at 2 events per year",
+            "Magazine story feature",
+            "5 strategic consultations annually",
+            "Access to mentor network",
+            "Exclusive official meetups",
+            "Tree plantation initiative participation",
+            "Lifetime Membership Certificate",
+            "Exclusive WhatsApp group access",
+            "50 promotional posters annually",
+            "Priority conference invitations"
+        ],
+        "highlights_json": [
+            "Valid Till 2047",
+            "Annual Event Access",
+            "Speaking Opportunities"
+        ],
+        "stats_json": [
+            "Valid Till 2047",
+            "10 Event Passes Yearly",
+            "50 Hours Annual Training",
+            "5 Strategy Consultations",
+            "2 Speaking Opportunities",
+            "Lifetime Recognition"
+        ],
+        "theme": "platinum"
+    },
+    {
+        "id": "international",
+        "title": "IBSEA International Membership",
+        "tagline": "Global Visibility. Strategic Influence. Cross-Border Growth.",
+        "fee_numeric": 249,
+        "currency": "USD",
+        "validity_days": 365,
+        "benefits_json": [
+            "Exclusive access to 3 Networking & Growth Exchange Meetups annually",
+            "Recognition and honor at Bharat Ke Maharathi Conference (Hybrid)",
+            "3-minute speaking opportunity at India@2047 Conference",
+            "Complimentary B2B and B2G matchmaking sessions",
+            "Official Membership Certificate and Personalized ID Card",
+            "Featured profile in IBSEA Magazine",
+            "10% discount on Vyapar Badhao Business Growth Platform",
+            "1-minute professionally curated introduction reel",
+            "Full access to IBSEA Global Community Network",
+            "Access to 13 IBSEA Conferences across India",
+            "Business expansion opportunities through State President network"
+        ],
+        "highlights_json": [
+            "International Networking Access",
+            "Conference Speaking Opportunity",
+            "Global Brand Recognition"
+        ],
+        "stats_json": [
+            "3 Global Meetups",
+            "13 Conference Access",
+            "B2B & B2G Matchmaking",
+            "3-Minute Stage Opportunity",
+            "Magazine Feature",
+            "10% Growth Platform Discount"
+        ],
+        "theme": "international"
+    }
+]

@@ -1,0 +1,90 @@
+/* Position arrows in center left/right */
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: orange !important;
+    color: white !important;
+    font-size: 22px !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Left arrow */
+.owl-nav .owl-prev {
+    left: 10px;
+}
+
+/* Right arrow */
+.owl-nav .owl-next {
+    right: 10px;
+}
+
+/* Remove default outline */
+.owl-nav button:focus {
+    outline: none;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #004a95;
+    /* IBSEA Navy */
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    font-family: sans-serif;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+}
+
+.news-item {
+    margin: 0 40px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.label {
+    background: #f26f21;
+    /* IBSEA Orange */
+    padding: 10px 20px;
+    font-weight: bold;
+    z-index: 10;
+    position: relative;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee2 {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content2 {
+    position: absolute;
+    width: 100%;
+    animation: scroll-up 10s linear infinite;
+}
+
+@keyframes scroll-up {
+    from {
+        top: 100%;
+    }
+
+    to {
+        top: -100%;
+    }
+}

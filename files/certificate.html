@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBSEA Static Layout</title>
+    <style>
+        :root {
+            /* Colors based on the IBSEA Branding */
+            --maroon-deep: #4a0e0e;
+            --gold-accent: #d4af37;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ccc;
+            /* Temporary background for contrast */
+            font-family: 'Times New Roman', serif;
+        }
+
+        .certificate-wrapper {
+            width: 900px;
+            height: 630px;
+            background-color: white;
+            /* Replace with your background image: background-image: url('your-image.jpg'); */
+            background-size: cover;
+            position: relative;
+            display: flex;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* --- LEFT SIDEBAR DESIGN --- */
+        .sidebar {
+            width: 80px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3d0a0a, #631212);
+            border-right: 4px solid var(--gold-accent);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* The Gold Ribbon/Medal element at the top left */
+        .sidebar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 40px;
+            height: 150px;
+            background-color: var(--gold-accent);
+            border: 2px solid #fff;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* --- CONTENT AREA --- */
+        .main-content {
+            flex: 1;
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .header-section {
+            margin-top: 20px;
+        }
+
+        .cert-title {
+            font-size: 45px;
+            color: var(--maroon-deep);
+            margin: 0;
+            letter-spacing: 6px;
+            font-weight: bold;
+            [cite: 2]
+        }
+
+        .cert-subtitle {
+            font-size: 22px;
+            color: var(--gold-accent);
+            margin: 5px 0 30px 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            [cite: 3]
+        }
+
+        .presentation-text {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 10px;
+            [cite: 4]
+        }
+
+        .recipient-name {
+            font-size: 36px;
+            color: var(--maroon-deep);
+            border-bottom: 2px solid var(--gold-accent);
+            padding: 0 40px 5px 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            [cite: 5]
+        }
+
+        .body-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            [cite: 6, 7, 8, 9]
+        }
+
+        /* --- FOOTER SECTION --- */
+        .footer {
+            width: 100%;
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 13px;
+        }
+
+        .meta-group {
+            text-align: left;
+            line-height: 1.8;
+            [cite: 11, 13]
+        }
+
+        .signature-group {
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .sig-line {
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            margin-top: 40px;
+            [cite: 17, 18]
+        }
+
+        .welcome-msg {
+            font-weight: bold;
+            color: var(--maroon-deep);
+            margin-top: 15px;
+            [cite: 10]
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="certificate-wrapper">
+        <div class="sidebar"></div>
+
+        <div class="main-content">
+            <div class="header-section">
+                <h1 class="cert-title">CERTIFICATE</h1> [cite: 2]
+                <h2 class="cert-subtitle">OF MEMBERSHIP</h2> [cite: 3]
+            </div>
+
+            <p class="presentation-text">THE CERTIFICATE IS PROUDLY PRESENTED TO</p> [cite: 4]
+            <div class="recipient-name">NEHA AGARWAL</div> [cite: 5]
+
+            <div class="body-text">
+                <p>Congratulations! You are now a valued member of the IBSEA community as a Booster Member. [cite: 6]
+                    As part of this dynamic network, we are committed to helping you expand your connections, knowledge,
+                    and sales opportunities. [cite: 7]
+                    Together, let us contribute towards India's mission of becoming a developed nation by 2047. [cite:
+                    8]
+                    We extend our best wishes for your future endeavors and look forward to achieving great milestones
+                    together.</p> [cite: 9]
+                <p class="welcome-msg">WELCOME TO IBSEA!</p> [cite: 10]
+            </div>
+
+            <div class="footer">
+                <div class="meta-group">
+                    <div><strong>ONBOARDING DATE:</strong> MAY 18, 2024</div> [cite: 11, 12]
+                    <div><strong>SERIAL NO:</strong> 1078</div> [cite: 13]
+                </div>
+
+                <div class="signature-group">
+                    <div class="sig-line">
+                        <strong>Dr. Anshumaan Singh</strong><br> [cite: 17]
+                        Chairman - IBSEA [cite: 18]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

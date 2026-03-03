@@ -1,0 +1,146 @@
+:root {
+    --main-ratio: 1396 / 629;
+    --side-ratio: 295 / 402;
+    --bg-gray: #f4f4f4;
+}
+
+/* Grid Layout */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    /* 70/30 Split */
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+/* Main Slider Styling */
+.main-slider-wrap {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-slider-wrap .item {
+    aspect-ratio: var(--main-ratio);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Sidebar Styling */
+.side-slider-wrap {
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-slider-wrap h3 {
+    font-size: 14px;
+    color: #555;
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.side-slider-wrap .item {
+    aspect-ratio: var(--side-ratio);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #eee;
+}
+
+/* Caption Overlay */
+.caption {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .dashboard-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-slider-wrap,
+    .side-slider-wrap {
+        width: 100%;
+    }
+
+    /* Always show arrows on mobile */
+    .owl-theme .owl-nav {
+        opacity: 1 !important;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
+
+/* Owl Dots Customization */
+.owl-theme .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+/* Navigation Arrows */
+.owl-theme .owl-nav {
+    margin-top: 0;
+    opacity: 0;
+    /* Hidden by default on desktop */
+    transition: opacity 0.3s ease;
+}
+
+/* Show on hover (Desktop) */
+.owl-carousel:hover .owl-nav {
+    opacity: 1;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 20px;
+    margin: 0;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    /* FORCE Circular on hover */
+}
+
+.owl-theme .owl-nav .owl-prev {
+    left: 10px;
+}
+
+.owl-theme .owl-nav .owl-next {
+    right: 10px;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: rgba(0, 0, 0, 0.8);
+}

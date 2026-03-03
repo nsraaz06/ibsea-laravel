@@ -1,0 +1,124 @@
+/* Master CSS: Startup India Inspiration 
+   Theme: Official Government / Startup Ecosystem
+*/
+
+:root {
+    /* Official Color Palette */
+    --si-primary-blue: #0047b3;
+    /* Main Branding */
+    --si-secondary-red: #ef4136;
+    /* Action/Buttons */
+    --si-text-dark: #212529;
+    /* Body Text */
+    --si-text-muted: #6c757d;
+    /* Subtext */
+    --si-bg-light: #f4f7f6;
+    /* Section Backgrounds */
+    --si-white: #ffffff;
+    --si-border: #dee2e6;
+
+    /* Typography */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 1. Global Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--si-text-dark);
+    line-height: 1.6;
+    background-color: var(--si-white);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Professional Heading Styles */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    color: var(--si-primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* 3. The "Startup India" Button Framework */
+.si-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.si-btn-primary {
+    background-color: var(--si-primary-blue);
+    color: var(--si-white);
+}
+
+.si-btn-primary:hover {
+    background-color: #00368a;
+    box-shadow: 0 4px 12px rgba(0, 71, 179, 0.2);
+}
+
+.si-btn-action {
+    background-color: var(--si-secondary-red);
+    color: var(--si-white);
+}
+
+.si-btn-action:hover {
+    background-color: #d33228;
+    box-shadow: 0 4px 12px rgba(239, 65, 54, 0.2);
+}
+
+/* 4. Layout & Grid Containers */
+.si-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.si-section {
+    padding: 80px 0;
+}
+
+.si-bg-alt {
+    background-color: var(--si-bg-light);
+}
+
+/* 5. Component: Professional Resource Card */
+.si-card {
+    background: var(--si-white);
+    border: 1px solid var(--si-border);
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.si-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: var(--si-primary-blue);
+}
+
+.si-card-label {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e7f0ff;
+    color: var(--si-primary-blue);
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
