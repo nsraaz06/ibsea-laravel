@@ -16,9 +16,18 @@ class GalleryController extends Controller
     {
         $this->optimizer = $optimizer;
     }
-    public function index()
+    public function index(Request $request)
     {
-        $galleries = Gallery::with('event')->latest()->paginate(20);
+        $galleryQuery = Gallery::query();
+
+        if ($request->has('category')) {
+            $galleryQuery->where('category', $request->category);
+        }
+
+        $galleries = $galleryQuery->with('event')
+            ->orderBy('created_at', 'desc')
+            ->paginate(12);
+
         return view('admin.gallery.index', compact('galleries'));
     }
 
@@ -31,24 +40,28 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,webp|max:5120',
             'title' => 'nullable|string|max:255',
             'event_id' => 'nullable|exists:events,id',
             'category' => 'required|string'
         ]);
 
-        if ($request->hasFile('image')) {
-            $imagePath = $this->optimizer->optimizeImage($request->image, 'uploads/gallery');
+        $uploadedCount = 0;
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $imagePath = $this->optimizer->optimizeImage($image, 'uploads/gallery');
 
-            Gallery::create([
-                'title' => $request->title,
-                'image_path' => $imagePath,
-                'event_id' => $request->event_id,
-                'category' => $request->category
-            ]);
+                Gallery::create([
+                    'title' => $request->title ?: $image->getClientOriginalName(),
+                    'image_path' => $imagePath,
+                    'event_id' => $request->event_id,
+                    'category' => $request->category
+                ]);
+                $uploadedCount++;
+            }
         }
 
-        return redirect()->route('admin.gallery.index')->with('success', 'Media uploaded to gallery successfully.');
+        return redirect()->route('admin.gallery.index')->with('success', $uploadedCount . ' Media items uploaded to gallery successfully.');
     }
 
     public function edit(Gallery $gallery)

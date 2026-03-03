@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\MembershipPlan;
 use App\Models\Event;
 use App\Models\Post;
+use App\Models\Gallery;
 
 class HomeController extends Controller
 {
@@ -40,6 +41,19 @@ class HomeController extends Controller
             ->limit(8)
             ->get();
 
+        $nationalPartners = Gallery::where('category', 'Strategic Partner - National')
+            ->orderBy('order', 'asc')
+            ->get();
+
+        $internationalPartners = Gallery::where('category', 'Strategic Partner - International')
+            ->orderBy('order', 'asc')
+            ->get();
+        
+        // Include MOU in national for now or handle as needed
+        $mouPartners = Gallery::where('category', 'Strategic Partner - MOU')
+            ->orderBy('order', 'asc')
+            ->get();
+
         $title = 'IBSEA | Home of International Business and Startups';
 
         return view('home', compact(
@@ -48,7 +62,10 @@ class HomeController extends Controller
             'featured_events',
             'slider_posts',
             'ticker_posts',
-            'events'
+            'events',
+            'nationalPartners',
+            'internationalPartners',
+            'mouPartners'
         ));
     }
 }

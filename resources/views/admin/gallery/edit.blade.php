@@ -25,7 +25,7 @@
                 <div class="space-y-4">
                     <label class="text-[13px] font-black text-slate-800 uppercase tracking-widest px-1">Media Category</label>
                     <select name="category" required class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-8 py-5 text-sm font-bold text-slate-800 focus:bg-white focus:ring-4 focus:ring-amber-500/10 focus:border-amber-500 transition-all">
-                        @foreach(['Event Highlights', 'Institutional Operations', 'Global Alliance', 'Press & Media'] as $cat)
+                        @foreach(['Event Highlights', 'Institutional Operations', 'Global Alliance', 'Press & Media', 'Strategic Partner - MOU', 'Strategic Partner - National', 'Strategic Partner - International'] as $cat)
                             <option value="{{ $cat }}" {{ $gallery->category == $cat ? 'selected' : '' }}>{{ $cat }}</option>
                         @endforeach
                     </select>

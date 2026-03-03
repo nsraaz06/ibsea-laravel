@@ -22,15 +22,28 @@
         </div>
     @endif
 
+    <div class="mb-10">
+        <div class="flex flex-wrap gap-4 items-center">
+            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest mr-2">Quick Filter:</span>
+            <a href="{{ route('admin.gallery.index') }}" class="px-6 py-2 rounded-full border {{ !request('category') ? 'bg-primary text-white border-primary' : 'bg-white text-slate-500 border-slate-100' }} text-[10px] font-black uppercase tracking-widest transition-all">All Media</a>
+            @foreach(['Event Highlights', 'Institutional Operations', 'Global Alliance', 'Press & Media', 'Strategic Partner - MOU', 'Strategic Partner - National', 'Strategic Partner - International'] as $cat)
+                <a href="{{ route('admin.gallery.index', ['category' => $cat]) }}" 
+                   class="px-6 py-2 rounded-full border {{ request('category') == $cat ? 'bg-primary text-white border-primary' : 'bg-white text-slate-500 border-slate-100 hover:border-primary/30' }} text-[10px] font-black uppercase tracking-widest transition-all">
+                    {{ str_replace('Strategic Partner - ', '', $cat) }}
+                </a>
+            @endforeach
+        </div>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         @forelse($galleries as $item)
         <div class="bg-white rounded-[2.5rem] shadow-premium border border-slate-100 overflow-hidden group hover:border-primary transition-all">
-            <div class="aspect-square relative overflow-hidden">
-                <img src="{{ asset($item->image_path) }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+            <div class="aspect-square relative overflow-hidden bg-slate-50">
+                <img src="{{ asset($item->image_path) }}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 p-4">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-30"></div>
                 
-                <div class="absolute top-4 left-4">
-                    <span class="bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-widest border border-white/10">
+                <div class="absolute top-4 left-4 right-4 flex justify-between items-start">
+                    <span class="bg-primary text-secondary px-3 py-1 rounded-full text-[7px] font-black uppercase tracking-widest shadow-lg">
                         {{ $item->category }}
                     </span>
                 </div>

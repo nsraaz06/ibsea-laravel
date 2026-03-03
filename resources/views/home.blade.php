@@ -350,7 +350,64 @@
     </div>
 </section>
 
-<!-- Global Connects Section -->
+<!-- Global and National Strategic Partners Section -->
+<section class="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800 overflow-hidden">
+    <div class="container mx-auto px-4 lg:px-16 mb-12 text-center" data-aos="fade-up">
+        <div class="inline-flex items-center gap-3 mb-4">
+            <span class="h-[1px] w-8 bg-primary/40"></span>
+            <span class="text-primary font-bold uppercase tracking-[0.2em] text-[10px]">Institutional Synergy</span>
+            <span class="h-[1px] w-8 bg-primary/40"></span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-display font-black text-secondary dark:text-white uppercase tracking-tight">Global and National <span class="text-primary">Strategic Partners</span></h2>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium text-sm">Empowering the ecosystem through high-authority institutional collaborations and strategic alliances.</p>
+    </div>
+
+    <!-- National Partners -->
+    <div class="mb-12">
+        <div class="px-4 lg:px-16 mb-4">
+            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">National Strategic Partners</h4>
+        </div>
+        <div class="swiper national-partner-swiper">
+            <div class="swiper-wrapper flex items-center">
+                @foreach($nationalPartners as $partner)
+                <div class="swiper-slide !w-auto flex items-center justify-center px-12">
+                    <div class="w-[200px] h-[100px] flex items-center justify-center bg-white dark:bg-slate-800 rounded-2xl shadow-premium border border-slate-100 dark:border-slate-700 p-6 hover:grayscale transition-all duration-500 group">
+                        <img src="{{ asset($partner->image_path) }}" alt="{{ $partner->title }}" title="{{ $partner->title }}" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-110">
+                    </div>
+                </div>
+                @endforeach
+                {{-- Handle empty state or add MOU if needed --}}
+                @foreach($mouPartners as $partner)
+                <div class="swiper-slide !w-auto flex items-center justify-center px-12">
+                    <div class="w-[200px] h-[100px] flex items-center justify-center bg-white dark:bg-slate-800 rounded-2xl shadow-premium border border-slate-100 dark:border-slate-700 p-6 hover:grayscale transition-all duration-500 group">
+                        <img src="{{ asset($partner->image_path) }}" alt="{{ $partner->title }}" title="{{ $partner->title }}" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-110">
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <!-- International Partners -->
+    <div>
+        <div class="px-4 lg:px-16 mb-4 text-right">
+            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">International Strategic Partners</h4>
+        </div>
+        <div class="swiper international-partner-swiper">
+            <div class="swiper-wrapper flex items-center">
+                @foreach($internationalPartners as $partner)
+                <div class="swiper-slide !w-auto flex items-center justify-center px-12">
+                    <div class="w-[200px] h-[100px] flex items-center justify-center bg-white dark:bg-slate-800 rounded-2xl shadow-premium border border-slate-100 dark:border-slate-700 p-6 hover:grayscale transition-all duration-500 group">
+                        <img src="{{ asset($partner->image_path) }}" alt="{{ $partner->title }}" title="{{ $partner->title }}" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-110">
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Global Connects Section
 <section class="py-16 bg-gray-50 dark:bg-slate-900/30 border-y border-slate-100 dark:border-slate-800">
     <div class="container mx-auto px-4 lg:px-16 text-center">
         <div class="inline-flex items-center gap-3 mb-10">
@@ -379,7 +436,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
  
 
 <!-- Animated Counters Section -->
@@ -998,9 +1055,6 @@
     </div>
 </section>
 
-<!-- Governance Schemes Section -->
-
-
 
 @endsection
 
@@ -1178,6 +1232,33 @@
 
         counters.forEach(counter => observer.observe(counter));
     };
+
+    // National Strategic Partner Swiper (Marquee Style - Forward)
+    const nationalPartnerSwiper = new Swiper('.national-partner-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        loop: true,
+        speed: 5500,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+    });
+
+    // International Strategic Partner Swiper (Marquee Style - Reverse)
+    const internationalPartnerSwiper = new Swiper('.international-partner-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        loop: true,
+        speed: 6000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            reverseDirection: true
+        },
+        allowTouchMove: false,
+    });
 
     document.addEventListener('DOMContentLoaded', () => {
         animateCounters();

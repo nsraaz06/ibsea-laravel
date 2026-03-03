@@ -28,6 +28,9 @@
                         <option value="Institutional Operations">Institutional Operations</option>
                         <option value="Global Alliance">Global Alliance</option>
                         <option value="Press & Media">Press & Media</option>
+                        <option value="Strategic Partner - MOU">Strategic Partner - MOU</option>
+                        <option value="Strategic Partner - National">Strategic Partner - National</option>
+                        <option value="Strategic Partner - International">Strategic Partner - International</option>
                     </select>
                 </div>
 
@@ -42,13 +45,13 @@
                 </div>
 
                 <div class="md:col-span-2 space-y-4">
-                    <label class="text-[13px] font-black text-slate-800 uppercase tracking-widest px-1">Visual Intelligence (Image)</label>
+                    <label class="text-[13px] font-black text-slate-800 uppercase tracking-widest px-1">Visual Intelligence (Images)</label>
                     <div class="relative group">
-                        <input type="file" name="image" required class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+                        <input type="file" name="images[]" multiple required class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
                         <div class="bg-slate-50 border-2 border-dashed border-slate-200 rounded-[2.5rem] p-12 text-center group-hover:bg-primary/5 group-hover:border-primary/30 transition-all">
                             <span class="material-icons text-5xl text-slate-300 group-hover:text-primary transition-all mb-4">add_a_photo</span>
-                            <p class="text-slate-500 font-bold uppercase text-[11px] tracking-widest">Select Image or drag & drop</p>
-                            <p class="text-[10px] text-slate-400 font-bold mt-2">Recommended: 16:9 ratio, Max 5MB</p>
+                            <p class="text-slate-500 font-bold uppercase text-[11px] tracking-widest">Select Images or drag & drop</p>
+                            <p class="text-[10px] text-slate-400 font-bold mt-2">Multiple Selection Supported. 200x100 for partners.</p>
                         </div>
                     </div>
                 </div>
