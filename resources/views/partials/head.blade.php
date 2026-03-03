@@ -8,7 +8,30 @@
     <link rel="apple-touch-icon" href="{{ asset($siteSettings['favicon']) }}">
 @else
     <link rel="icon" type="image/png" href="{{ asset('image/logo-ibsea.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('pwa-192x192.png') }}">
 @endif
+
+<!-- PWA Primary Meta Tags -->
+<meta name="theme-color" content="#004a95">
+<link rel="manifest" href="{{ asset('manifest.json') }}">
+
+<!-- iOS Meta Tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="IBSEA">
+
+<!-- Service Worker Registration -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register("{{ asset('sw.js') }}").then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
 
 <!-- Immediate Assets & Tailwind CDN Fallback -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
