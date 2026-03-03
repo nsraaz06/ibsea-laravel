@@ -36,6 +36,8 @@ Route::get('/terms-and-conditions', [LegalController::class, 'terms'])->name('te
 Route::get('/refund-policy', [LegalController::class, 'refund'])->name('refund');
 Route::get('/news', [\App\Http\Controllers\PublicPostController::class, 'index'])->name('news.index');
 Route::get('/news/{slug}', [\App\Http\Controllers\PublicPostController::class, 'show'])->name('news.show');
+Route::get('/gallery', [\App\Http\Controllers\PublicGalleryController::class, 'index'])->name('gallery.index');
+Route::get('/gallery/{title}', [\App\Http\Controllers\PublicGalleryController::class, 'show'])->name('gallery.show')->where('title', '.*');
 
 // Strategic Initiatives
 Route::get('/initiatives', [\App\Http\Controllers\PublicInitiativeController::class, 'index'])->name('public.initiatives.index');
@@ -269,7 +271,7 @@ Route::prefix('admin')->group(function () {
         });
         
         Route::middleware(['admin.permission:manage_gallery'])->group(function () {
-            Route::resource('gallery', \App\Http\Controllers\Admin\GalleryController::class)->names([
+            Route::resource('gallery', \App\Http\Controllers\Admin\GalleryController::class)->except(['show'])->names([
                 'index' => 'admin.gallery.index',
                 'create' => 'admin.gallery.create',
                 'store' => 'admin.gallery.store',
@@ -277,6 +279,8 @@ Route::prefix('admin')->group(function () {
                 'update' => 'admin.gallery.update',
                 'destroy' => 'admin.gallery.destroy',
             ]);
+            Route::get('/gallery/{id}', [\App\Http\Controllers\Admin\GalleryController::class, 'show'])->name('admin.gallery.show')->where('id', '.*');
+            Route::delete('/gallery/image/{id}', [\App\Http\Controllers\Admin\GalleryController::class, 'removeImage'])->name('admin.gallery.remove-image');
         });
 
         // Form Builder Routes

@@ -36,38 +36,50 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        @forelse($galleries as $item)
-        <div class="bg-white rounded-[2.5rem] shadow-premium border border-slate-100 overflow-hidden group hover:border-primary transition-all">
+        @forelse($galleries as $folder)
+        <div class="bg-white rounded-[2.5rem] shadow-premium border border-slate-100 overflow-hidden group hover:border-primary transition-all relative">
             <div class="aspect-square relative overflow-hidden bg-slate-50">
-                <img src="{{ asset($item->image_path) }}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 p-4">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-30"></div>
-                
-                <div class="absolute top-4 left-4 right-4 flex justify-between items-start">
-                    <span class="bg-primary text-secondary px-3 py-1 rounded-full text-[7px] font-black uppercase tracking-widest shadow-lg">
-                        {{ $item->category }}
-                    </span>
+                <!-- Stacked Effect for Folder -->
+                <div class="absolute inset-0 flex items-center justify-center p-6">
+                    <div class="w-full h-full bg-slate-200 rounded-2xl rotate-3 translate-x-1 translate-y-1 opacity-50"></div>
+                    <div class="absolute inset-0 bg-white border border-slate-100 rounded-3xl m-6 p-1 shadow-inner overflow-hidden">
+                        <img src="{{ asset($folder->image_path) }}" class="w-full h-full object-cover rounded-2xl">
+                    </div>
                 </div>
 
-                <div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-all opacity-0 group-hover:opacity-100">
+                <div class="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
+                    <span class="bg-primary text-secondary px-3 py-1 rounded-full text-[7px] font-black uppercase tracking-widest shadow-lg">
+                        {{ $folder->category }}
+                    </span>
+                    <div class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-[10px] font-black shadow-lg">
+                        {{ $folder->image_count }}
+                    </div>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 translate-y-0 group-hover:translate-y-0 transition-all opacity-0 group-hover:opacity-100 z-10">
                     <div class="flex justify-center gap-2">
-                        <a href="{{ route('admin.gallery.edit', $item->id) }}" class="p-3 bg-white/20 backdrop-blur-md text-white rounded-xl hover:bg-white hover:text-primary transition-all shadow-xl">
-                            <span class="material-icons text-sm">edit</span>
+                        <a href="{{ route('admin.gallery.edit', $folder->id) }}" class="p-3 bg-primary text-white rounded-xl hover:bg-accent transition-all shadow-xl flex items-center gap-2">
+                            <span class="material-icons text-sm">folder_open</span>
+                            <span class="text-[9px] font-black uppercase">Open Folder</span>
                         </a>
-                        <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" class="inline" onsubmit="return confirm('Erase this mission asset?')">
+                        <form action="{{ route('admin.gallery.destroy', $folder->id) }}" method="POST" class="inline" onsubmit="return confirm('Erase this MISSION FOLDER and all its contents?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="p-3 bg-white/20 backdrop-blur-md text-white rounded-xl hover:bg-red-500 hover:text-white transition-all shadow-xl">
-                                <span class="material-icons text-sm">delete</span>
+                            <button type="submit" class="p-3 bg-white text-red-500 border border-slate-100 rounded-xl hover:bg-red-500 hover:text-white transition-all shadow-xl">
+                                <span class="material-icons text-sm">delete_sweep</span>
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="p-6">
-                <p class="text-xs font-black text-slate-800 uppercase tracking-tight truncate">{{ $item->title ?? 'Untitled Asset' }}</p>
-                <div class="mt-3 flex items-center gap-2 text-slate-400">
-                    <span class="material-icons text-xs">event</span>
-                    <p class="text-[9px] font-bold uppercase tracking-widest">{{ $item->event->name ?? 'Global Operation' }}</p>
+            <div class="p-6 pt-2">
+                <p class="text-xs font-black text-slate-800 uppercase tracking-tight line-clamp-2 min-h-[2.5rem]">{{ $folder->title }}</p>
+                <div class="mt-2 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-slate-400">
+                        <span class="material-icons text-xs">category</span>
+                        <p class="text-[8px] font-bold uppercase tracking-widest truncate max-w-[100px]">{{ $folder->category }}</p>
+                    </div>
+                    <p class="text-[9px] font-black text-primary opacity-50 uppercase tracking-widest">{{ $folder->image_count }} Visuals</p>
                 </div>
             </div>
         </div>

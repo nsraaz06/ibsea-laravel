@@ -145,7 +145,7 @@
                             <li><a href="{{ url('/news?category=Blog') }}" class="block p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 text-[10px] text-slate-700 dark:text-slate-300 hover:text-orange-500 font-black uppercase tracking-widest">Blogs</a></li>
                             <li><a href="{{ url('/news?category=News') }}" class="block p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 text-[10px] text-slate-700 dark:text-slate-300 hover:text-orange-500 font-black uppercase tracking-widest">News</a></li>
                             <li><a href="{{ url('/news?category=Press Release') }}" class="block p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 text-[10px] text-slate-700 dark:text-slate-300 hover:text-orange-500 font-black uppercase tracking-widest">Press Releases</a></li>
-                            <li><a href="{{ url('/#gallery') }}" class="block p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 text-[10px] text-slate-700 dark:text-slate-300 hover:text-orange-500 font-black uppercase tracking-widest">Gallery</a></li>
+                            <li><a href="{{ route('gallery.index') }}" class="block p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 text-[10px] text-slate-700 dark:text-slate-300 hover:text-orange-500 font-black uppercase tracking-widest">Gallery</a></li>
                         </ul>
                     </div>
                 </li>
@@ -201,7 +201,7 @@
                         <li><a href="{{ url('/news?category=Blog') }}" class="text-sm font-bold text-slate-800 dark:text-white hover:text-orange-500 block">Blogs</a></li>
                         <li><a href="{{ url('/news?category=News') }}" class="text-sm font-bold text-slate-800 dark:text-white hover:text-orange-500 block">News</a></li>
                         <li><a href="{{ url('/news?category=Press Release') }}" class="text-sm font-bold text-slate-800 dark:text-white hover:text-orange-500 block">Press Releases</a></li>
-                        <li><a href="{{ url('/#gallery') }}" class="text-sm font-bold text-slate-800 dark:text-white hover:text-orange-500 block">Gallery</a></li>
+                        <li><a href="{{ route('gallery.index') }}" class="text-sm font-bold text-slate-800 dark:text-white hover:text-orange-500 block">Gallery</a></li>
                     </ul>
                 </li>
 
