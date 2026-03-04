@@ -23,6 +23,11 @@ class ResourceController extends Controller
         return view('admin.resources.index', compact('resources'));
     }
 
+    public function show($id)
+    {
+        return redirect()->route('admin.resources.index');
+    }
+
     public function create()
     {
         $categories = ResourceCategory::all();
@@ -135,8 +140,10 @@ class ResourceController extends Controller
         return redirect()->route('admin.resources.index')->with('success', 'Resource updated successfully.');
     }
 
-    public function destroy(MemberResource $resource)
+    public function destroy($id)
     {
+        $resource = MemberResource::findOrFail($id);
+        
         if (file_exists(public_path($resource->file_path))) {
             @unlink(public_path($resource->file_path));
         }
