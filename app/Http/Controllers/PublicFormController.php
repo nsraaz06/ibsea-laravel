@@ -134,14 +134,26 @@ class PublicFormController extends Controller
 
         // Notify Admins
         try {
-            $admins = \App\Models\Admin::all();
-            foreach ($admins as $admin) {
-                if ($admin->email) {
-                    \Illuminate\Support\Facades\Mail::to($admin->email)->send(new \App\Mail\FormSubmitted($submission));
-                }
+            $notificationEmails = $form->settings['notification_emails'] ?? null;
+            $recipients = [];
+
+            if ($notificationEmails) {
+                // Split by comma, trim whitespace, and filter empty/invalid emails
+                $recipients = array_filter(array_map('trim', explode(',', $notificationEmails)), function($email) {
+                    return filter_var($email, FILTER_VALIDATE_EMAIL);
+                });
+            }
+
+            if (empty($recipients)) {
+                // Fallback: Notify all registered admins
+                $recipients = \App\Models\Admin::whereNotNull('email')->pluck('email')->toArray();
+            }
+
+            foreach ($recipients as $email) {
+                \Illuminate\Support\Facades\Mail::to($email)->send(new \App\Mail\FormSubmitted($submission));
             }
         } catch (\Exception $e) {
-            Log::error('Form Submission Email Failed: ' . $e->getMessage());
+            Log::error('Form Submission Admin Notification Failed: ' . $e->getMessage());
         }
 
         // Send confirmation email to the submitter
@@ -150,11 +162,22 @@ class PublicFormController extends Controller
 
             if ($confirmedEmailKey === 'none' || $confirmedEmailKey === 'disable') {
                 $submitterEmail = null;
-            } elseif ($confirmedEmailKey) {
-                $submitterEmail = $submittedData[$confirmedEmailKey] ?? null;
+            } elseif ($confirmedEmailKey && isset($submittedData[$confirmedEmailKey])) {
+                $submitterEmail = $submittedData[$confirmedEmailKey];
             } else {
+                // Better Fallback: Find the first field of type 'email'
                 $emailField = collect($form->fields)->firstWhere('type', 'email');
                 $submitterEmail = $emailField ? ($submittedData[$emailField['name']] ?? null) : null;
+                
+                // Final Fallback: Search for any submitted value that looks like an email
+                if (!$submitterEmail) {
+                    foreach ($submittedData as $val) {
+                        if (is_string($val) && filter_var($val, FILTER_VALIDATE_EMAIL)) {
+                            $submitterEmail = $val;
+                            break;
+                        }
+                    }
+                }
             }
 
             if ($submitterEmail && filter_var($submitterEmail, FILTER_VALIDATE_EMAIL)) {

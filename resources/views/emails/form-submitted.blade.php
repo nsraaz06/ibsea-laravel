@@ -18,7 +18,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>New Intelligence</h1>
+            <h1>New Submission</h1>
             <p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">Protocol: {{ $submission->form->title }}</p>
         </div>
         <div class="content">

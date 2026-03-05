@@ -27,6 +27,17 @@
 
                 <div class="space-y-6">
                     <div class="space-y-2">
+                        <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
+                            <span class="material-icons text-sm text-primary">admin_panel_settings</span>
+                            Admin Notification Emails
+                        </label>
+                        <p class="text-[10px] text-slate-400 px-1 -mt-1">Comma-separated list of emails that receive submission alerts. Leave blank to notify all admins.</p>
+                        <input type="text" name="settings[notification_emails]" value="{{ old('settings.notification_emails', $form->settings['notification_emails'] ?? '') }}" 
+                            placeholder="e.g. admin@ibsea.in, alerts@ibsea.in"
+                            class="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all">
+                    </div>
+
+                    <div class="space-y-2">
                         <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-1">Form Title</label>
                         <input type="text" name="title" value="{{ old('title', $form->title) }}" required placeholder="e.g. Founder Intake Form" 
                             class="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all">
@@ -64,13 +75,15 @@
                             <span class="material-icons text-sm text-primary">mark_email_read</span>
                             Confirmation Email Field
                         </label>
-                        <p class="text-[10px] text-slate-400 px-1 -mt-1">Enter the <strong>Field Key</strong> of the email field that receives the auto-confirm email. Leave blank to auto-detect.</p>
-                        <input type="text" name="settings[confirmation_email_field]" 
-                            value="{{ old('settings.confirmation_email_field', $form->settings['confirmation_email_field'] ?? '') }}"
-                            id="confirm_email_key"
-                            placeholder="e.g. email_id"
-                            class="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all font-mono">
-                        <div id="email_fields_hint" class="text-[10px] text-slate-400 px-1"></div>
+                        <p class="text-[10px] text-slate-400 px-1 -mt-1">Select the <strong>Email Field</strong> that receives the auto-confirm email. Use "None" to disable.</p>
+                        <select name="settings[confirmation_email_field]" id="confirm_email_field_select"
+                            class="w-full bg-slate-50 border-none rounded-2xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all">
+                            <option value="">— Auto Detect (Recommended) —</option>
+                            <option value="none" {{ ($form->settings['confirmation_email_field'] ?? '') == 'none' ? 'selected' : '' }}>None (Disable Confirmation)</option>
+                        </select>
+                        @error('settings.confirmation_email_field')
+                            <p class="text-red-500 text-[10px] px-1 font-bold">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div class="space-y-2">
@@ -275,12 +288,60 @@
         phW.classList.toggle('hidden',    NO_PLACEHOLDER.includes(type));
     }
 
+    function refreshConfirmationEmailDropdown() {
+        const select = document.getElementById('confirm_email_field_select');
+        const currentValue = "{{ $form->settings['confirmation_email_field'] ?? '' }}";
+        
+        // Keep "Auto Detect" and "None"
+        const options = [
+            { val: '', text: '— Auto Detect (Recommended) —' },
+            { val: 'none', text: 'None (Disable Confirmation)' }
+        ];
+
+        // Find all fields currently in the container
+        const rows = document.querySelectorAll('.field-row');
+        rows.forEach(row => {
+            const label = row.querySelector('[name$="[label]"]').value || 'Unnamed Field';
+            const name  = row.querySelector('[name$="[name]"]').value;
+            const type  = row.querySelector('.field-type-select').value;
+
+            if (name && type === 'email') {
+                options.push({ val: name, text: `${label} (${name})` });
+            }
+        });
+
+        const prevVal = select.value || currentValue;
+        select.innerHTML = '';
+        options.forEach(opt => {
+            const o = document.createElement('option');
+            o.value = opt.val;
+            o.textContent = opt.text;
+            if (opt.val === prevVal) o.selected = true;
+            select.appendChild(o);
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         if (existingFields && existingFields.length > 0) {
             existingFields.forEach(field => addField(field));
         } else {
             addField();
         }
+        
+        // Initial refresh
+        refreshConfirmationEmailDropdown();
+
+        // Listen for changes on field names/labels to keep dropdown in sync
+        document.getElementById('fields-container').addEventListener('input', (e) => {
+            if (e.target.name && (e.target.name.includes('[label]') || e.target.name.includes('[name]'))) {
+                refreshConfirmationEmailDropdown();
+            }
+        });
+        document.getElementById('fields-container').addEventListener('change', (e) => {
+            if (e.target.classList.contains('field-type-select')) {
+                refreshConfirmationEmailDropdown();
+            }
+        });
     });
 </script>
 

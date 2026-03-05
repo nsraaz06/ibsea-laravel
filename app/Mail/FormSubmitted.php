@@ -27,7 +27,7 @@ class FormSubmitted extends Mailable
      */
     public function build()
     {
-        return $this->subject('New Intelligence Logged: ' . $this->submission->form->title)
+        return $this->subject('New Form Submission: ' . $this->submission->form->title)
                     ->view('emails.form-submitted');
     }
 }

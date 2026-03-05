@@ -96,6 +96,16 @@ class FormController extends Controller
 
         // Preserve existing settings, then overlay new ones and new image
         $settings = array_merge($form->settings ?? [], $request->input('settings', []));
+        
+        // Validation for confirmation email field
+        $confField = $settings['confirmation_email_field'] ?? '';
+        if ($confField && !in_array($confField, ['none', 'disable'])) {
+            $fieldNames = collect($request->fields)->pluck('name')->toArray();
+            if (!in_array($confField, $fieldNames)) {
+                return back()->withInput()->withErrors(['settings.confirmation_email_field' => 'The confirmation email field must be a valid key from your field architecture.']);
+            }
+        }
+
         if ($request->hasFile('featured_image')) {
             $settings['featured_image'] = $request->file('featured_image')->store('form-banners', 'public');
         }
