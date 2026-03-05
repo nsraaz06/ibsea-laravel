@@ -13,20 +13,11 @@ class IncreaseReferralCodeLengthInMembersTable extends Migration
      */
     public function up()
     {
-        Schema::table('members', function (Blueprint $table) {
-            $table->string('referral_code', 20)->change();
-        });
+        \Illuminate\Support\Facades\DB::statement('ALTER TABLE members MODIFY referral_code VARCHAR(20)');
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        Schema::table('members', function (Blueprint $table) {
-            $table->string('referral_code', 8)->change();
-        });
+        \Illuminate\Support\Facades\DB::statement('ALTER TABLE members MODIFY referral_code VARCHAR(8)');
     }
 }

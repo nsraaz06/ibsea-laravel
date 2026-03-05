@@ -113,7 +113,8 @@
                             'allow_id_card_download' => 'Member ID Card Download',
                             'allow_certificate_download' => 'Membership Certificate Download',
                             'allow_ticket_download' => 'Event Ticket Download',
-                            'allow_referral_program' => 'Referral Program Access'
+                            'allow_referral_program' => 'Referral Program Access',
+                            'allow_course_cms' => 'Course CMS Module'
                         ] as $key => $label)
                         <div class="bg-slate-50/50 p-6 rounded-3xl border border-slate-100 flex items-center justify-between group hover:bg-white hover:border-accent/30 hover:shadow-lg transition-all">
                             <div class="space-y-1">

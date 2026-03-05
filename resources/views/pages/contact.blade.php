@@ -18,7 +18,7 @@
                         </div>
                         <div>
                             <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Send an Email</p>
-                            <a href="mailto:{{ $settings['contact_email'] ?? 'contact@ibsea.in' }}" class="text-lg font-black text-slate-900 dark:text-white hover:text-primary transition-colors">{{ $settings['contact_email'] ?? 'contact@ibsea.in' }}</a>
+                            <a href="mailto:{{ $siteSettings['contact_email'] ?? 'contact@ibsea.in' }}" class="text-lg font-black text-slate-900 dark:text-white hover:text-primary transition-colors">{{ $siteSettings['contact_email'] ?? 'contact@ibsea.in' }}</a>
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@
                         </div>
                         <div>
                             <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Call Our Desk</p>
-                            <a href="tel:{{ $settings['contact_phone'] ?? '+917651876071' }}" class="text-lg font-black text-slate-900 dark:text-white hover:text-orange-500 transition-colors">{{ $settings['contact_phone'] ?? '+91 76518 76071' }}</a>
+                            <a href="tel:{{ $siteSettings['contact_phone'] ?? '+917651876071' }}" class="text-lg font-black text-slate-900 dark:text-white hover:text-orange-500 transition-colors">{{ $siteSettings['contact_phone'] ?? '+91 76518 76071' }}</a>
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@
                         </div>
                         <div>
                             <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Visit Headquarters</p>
-                            <p class="text-md font-bold text-slate-900 dark:text-white leading-tight">{!! nl2br(e($settings['hq_address'] ?? "1/22, Asaf Ali Road,\nNew Delhi - 110001")) !!}</p>
+                            <p class="text-md font-bold text-slate-900 dark:text-white leading-tight">{!! nl2br(e($siteSettings['hq_address'] ?? "1/22, Asaf Ali Road,\nNew Delhi - 110001")) !!}</p>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                         <!-- Simple Static Fallback if form not created yet -->
                         <div class="text-center py-10">
                             <p class="text-slate-400 font-bold mb-4 italic">Secretariat Form is being calibrated.</p>
-                            <a href="mailto:{{ $settings['contact_email'] ?? 'contact@ibsea.in' }}" class="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-primary/20">
+                            <a href="mailto:{{ $siteSettings['contact_email'] ?? 'contact@ibsea.in' }}" class="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-primary/20">
                                 <span class="material-icons">mail</span>
                                 EMAIL SECRETARIAT
                             </a>

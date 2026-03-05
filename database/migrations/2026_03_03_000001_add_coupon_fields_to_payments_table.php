@@ -14,10 +14,12 @@ class AddCouponFieldsToPaymentsTable extends Migration
     public function up()
     {
         Schema::table('payments', function (Blueprint $table) {
-            $table->unsignedBigInteger('coupon_id')->nullable()->after('item_id');
-            $table->decimal('discount_amount', 10, 2)->default(0.00)->after('coupon_id');
-            
-            $table->foreign('coupon_id')->references('id')->on('coupons')->onDelete('set null');
+            if (!Schema::hasColumn('payments', 'coupon_id')) {
+                $table->unsignedBigInteger('coupon_id')->nullable()->after('item_id');
+            }
+            if (!Schema::hasColumn('payments', 'discount_amount')) {
+                $table->decimal('discount_amount', 10, 2)->default(0.00)->after('coupon_id');
+            }
         });
     }
 

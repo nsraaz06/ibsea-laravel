@@ -187,4 +187,14 @@ class Member extends Authenticatable
 
         return [true, "Eligible to use membership pass."];
     }
+
+    public function courseEnrollments()
+    {
+        return $this->hasMany(CourseEnrollment::class);
+    }
+
+    public function lessonCompletions()
+    {
+        return $this->hasMany(CourseLessonCompletion::class);
+    }
 }

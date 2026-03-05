@@ -1,6 +1,3 @@
-@php
-    $settings = \App\Models\SiteSetting::pluck('value', 'key');
-@endphp
 
 <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 text-sm py-20 px-6">
     <div class="max-w-7xl mx-auto">
@@ -9,9 +6,9 @@
                 <img src="{{ asset('ibsea-text-33w-600x83.png.webp') }}" class="h-10" alt="IBSEA Logo" />
                 <p class="font-medium leading-relaxed">The leading voice for international business and startups, driving growth through policy, partnership, and innovation.</p>
                 <div class="flex gap-4">
-                    <a href="{{ $settings['facebook_link'] ?? '#' }}" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="{{ $settings['twitter_link'] ?? '#' }}" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="{{ $settings['linkedin_link'] ?? '#' }}" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="{{ $siteSettings['facebook_link'] ?? '#' }}" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="{{ $siteSettings['twitter_link'] ?? '#' }}" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="{{ $siteSettings['linkedin_link'] ?? '#' }}" class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
             
@@ -41,15 +38,15 @@
                 <div class="space-y-6">
                     <div class="flex items-start gap-4">
                         <span class="material-icons text-orange-500">location_on</span>
-                        <p class="font-bold">{!! nl2br(e($settings['hq_address'] ?? "1/22,Asaf Ali Road,\nNew Delhi - 110001")) !!}</p>
+                        <p class="font-bold">{!! nl2br(e($siteSettings['hq_address'] ?? "1/22,Asaf Ali Road,\nNew Delhi - 110001")) !!}</p>
                     </div>
                     <div class="flex items-center gap-4">
                         <span class="material-icons text-orange-500">phone</span>
-                        <p class="font-bold">{{ $settings['contact_phone'] ?? '+91 76518 76071' }}</p>
+                        <p class="font-bold">{{ $siteSettings['contact_phone'] ?? '+91 76518 76071' }}</p>
                     </div>
                     <div class="flex items-center gap-4">
                         <span class="material-icons text-orange-500">email</span>
-                        <p class="font-bold">{{ $settings['contact_email'] ?? 'contact@ibsea.in' }}</p>
+                        <p class="font-bold">{{ $siteSettings['contact_email'] ?? 'contact@ibsea.in' }}</p>
                     </div>
                 </div>
             </div>

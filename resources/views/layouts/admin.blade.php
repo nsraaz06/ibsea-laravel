@@ -229,6 +229,13 @@
             </a>
             @endif
 
+            @if(($siteSettings['allow_course_cms'] ?? '0') == '1' && auth('admin')->user()->hasPermission('manage_courses'))
+            <a href="{{ route('admin.courses.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all {{ Request::routeIs('admin.courses.*') ? 'font-semibold shadow-lg' : '' }}" style="{{ Request::routeIs('admin.courses.*') ? 'background-color: #f26f21; color: white;' : 'color: #cbd5e1;' }}" onmouseover="if(!'{{ Request::routeIs('admin.courses.*') }}') { this.style.backgroundColor='rgba(0,74,149,0.4)'; this.style.color='white'; }" onmouseout="if(!'{{ Request::routeIs('admin.courses.*') }}') { this.style.backgroundColor=''; this.style.color='#cbd5e1'; }">
+                <span class="material-icons">school</span>
+                Learning Hub
+            </a>
+            @endif
+
             @if(auth('admin')->user()->hasPermission('manage_analytics'))
             <a href="{{ route('admin.analytics.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all {{ Request::routeIs('admin.analytics.*') ? 'font-semibold shadow-lg' : '' }}" style="{{ Request::routeIs('admin.analytics.*') ? 'background-color: #f26f21; color: white;' : 'color: #cbd5e1;' }}" onmouseover="if(!'{{ Request::routeIs('admin.analytics.*') }}') { this.style.backgroundColor='rgba(0,74,149,0.4)'; this.style.color='white'; }" onmouseout="if(!'{{ Request::routeIs('admin.analytics.*') }}') { this.style.backgroundColor=''; this.style.color='#cbd5e1'; }">
                 <span class="material-icons">trending_up</span>

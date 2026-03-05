@@ -60,6 +60,17 @@
             </div>
             @endif
 
+            <!-- Learning CMS Link (New) -->
+            @if(\App\Models\SiteSetting::where('key', 'allow_course_cms')->value('value') == 1)
+            <div class="px-4 py-2 mt-2">
+                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest pl-2 mb-2">Education</p>
+                <a class="flex items-center gap-3 px-4 py-2 {{ request()->routeIs('user.courses.*') ? 'text-primary bg-primary/5' : 'text-slate-500 dark:text-slate-400 hover:text-primary hover:bg-primary/5' }} rounded-xl font-bold text-xs transition-all mb-1" href="{{ route('user.courses.index') }}">
+                    <span class="material-icons text-sm">school</span>
+                    Learning Hub
+                </a>
+            </div>
+            @endif
+
             <a class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('user.events.find') ? 'bg-primary/10 text-primary' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5' }} rounded-xl font-bold text-sm transition-all" href="{{ route('user.events.find') }}">
                 <span class="material-icons text-xl">explore</span>
                 Browse Events

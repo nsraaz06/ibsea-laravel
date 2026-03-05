@@ -282,7 +282,7 @@
                 <!-- Right Column (Social Growth & Events) -->
                 <div class="space-y-12">
                     <!-- Referral Network -->
-                    @if(($settings['allow_referral_program'] ?? '1') == '1')
+                    @if(($siteSettings['allow_referral_program'] ?? '1') == '1')
                     <div class="bg-white dark:bg-slate-900 p-6 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-xl flex flex-col justify-between group hover:border-primary/30 transition-all duration-500 hover:shadow-primary/5">
                         <div>
                             <div class="flex items-center justify-between mb-6">

@@ -16,6 +16,8 @@ use App\Models\EventBooking;
 use App\Notifications\WelcomeGuestMember;
 use Illuminate\Support\Facades\Password;
 use App\Models\Coupon;
+use App\Models\Course;
+use App\Models\CourseEnrollment;
 
 class PaymentController extends Controller
 {
@@ -46,6 +48,11 @@ class PaymentController extends Controller
             $amount = $is_offer_valid ? $ticket->offer_price : $ticket->original_price;
             
             // Assuming tickets are INR for now, or add currency to tickets later
+            $currency_symbol = '₹';
+        } elseif ($type === 'Course') {
+            $course = Course::findOrFail($item_id);
+            $item_name = "Course: " . $course->title;
+            $amount = $course->price;
             $currency_symbol = '₹';
         }
 
@@ -81,7 +88,7 @@ class PaymentController extends Controller
     public function initiate(Request $request)
     {
         $request->validate([
-            'type' => 'required|in:Membership,Event',
+            'type' => 'required|in:Membership,Event,Course',
             'item_id' => 'required',
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -116,6 +123,11 @@ class PaymentController extends Controller
             
             $currency = 'INR';
             $item_name = $ticket->ticket_name . " | " . $ticket->event->name;
+        } elseif ($type === 'Course') {
+            $course = Course::findOrFail($item_id);
+            $amount = $course->price;
+            $currency = 'INR';
+            $item_name = "Course Enrollment: " . $course->title;
         }
 
         // Handle Guest/Member mapping EARLIER for Coupon Validation
@@ -217,6 +229,14 @@ class PaymentController extends Controller
                         'status' => 'Active',
                         'membership_plan_id' => $plan->id
                     ]);
+                } else if ($payment->payment_type === 'Course') {
+                    CourseEnrollment::firstOrCreate([
+                        'member_id' => $payment->member_id,
+                        'course_id' => $payment->item_id,
+                    ], [
+                        'payment_status' => 'paid',
+                        'amount_paid' => $payment->amount
+                    ]);
                 }
                 if ($payment->coupon_id) Coupon::where('id', $payment->coupon_id)->increment('used_count');
             });
@@ -295,7 +315,7 @@ class PaymentController extends Controller
             }
 
             Log::error('Razorpay Order Initiation Failed', ['response' => $response->body()]);
-            $redirectRoute = $type === 'Event' ? route('public.events.show', $item_id) : route('membership');
+            $redirectRoute = $type === 'Event' ? route('public.events.show', $item_id) : ($type === 'Course' ? route('user.courses.show', Course::find($item_id)->slug ?? '') : route('membership'));
             return redirect($redirectRoute)->with('error', 'Razorpay initialization failed. Please try again.');
 
         } else {
@@ -359,7 +379,7 @@ class PaymentController extends Controller
 
             Log::error('Cashfree Payment Initiation Failed', ['response' => $response->body()]);
             
-            $redirectRoute = $type === 'Event' ? route('public.events.show', $item_id) : route('membership');
+            $redirectRoute = $type === 'Event' ? route('public.events.show', $item_id) : ($type === 'Course' ? route('user.courses.show', Course::find($item_id)->slug ?? '') : route('membership'));
             return redirect($redirectRoute)->with('error', 'Payment gateway initialization failed. Please try again later.');
         }
     }
@@ -461,6 +481,14 @@ class PaymentController extends Controller
                         if ($ticket->ticket_quantity > 0) {
                             $ticket->decrement('ticket_quantity');
                         }
+                    } else if ($payment->payment_type === 'Course') {
+                        CourseEnrollment::firstOrCreate([
+                            'member_id' => $payment->member_id,
+                            'course_id' => $payment->item_id,
+                        ], [
+                            'payment_status' => 'paid',
+                            'amount_paid' => $payment->amount
+                        ]);
                     }
 
                     // Increment Coupon usage

@@ -104,6 +104,15 @@ Route::middleware(['auth:member'])->group(function () {
     // Referral Hub (Phase 39)
     Route::get('/user/referral', [\App\Http\Controllers\Member\ReferralController::class, 'index'])->name('user.referral.index');
     Route::get('/user/referral/network-data', [\App\Http\Controllers\Member\ReferralController::class, 'networkData'])->name('user.referral.network');
+
+    // Course Learning Hub
+    Route::get('/user/courses', [\App\Http\Controllers\Member\CourseController::class, 'index'])->name('user.courses.index');
+    Route::get('/user/courses/{course:slug}', [\App\Http\Controllers\Member\CourseController::class, 'show'])->name('user.courses.show');
+    Route::get('/user/courses/{course:slug}/watch/{lesson}', [\App\Http\Controllers\Member\CourseController::class, 'watch'])->name('user.courses.watch');
+    Route::post('/user/courses/{course:slug}/complete/{lesson}', [\App\Http\Controllers\Member\CourseController::class, 'completeLesson'])->name('user.courses.complete');
+    Route::get('/user/courses/{course:slug}/certificate', [\App\Http\Controllers\Member\CourseController::class, 'downloadCertificate'])->name('user.courses.certificate');
+    Route::get('/user/courses/{course:slug}/quiz/{quiz}', [\App\Http\Controllers\Member\CourseController::class, 'quiz'])->name('user.courses.quiz');
+    Route::post('/user/courses/{course:slug}/quiz/{quiz}/submit', [\App\Http\Controllers\Member\CourseController::class, 'submitQuiz'])->name('user.courses.quiz.submit');
 });
 
 // Admin Auth Routes
@@ -281,6 +290,32 @@ Route::prefix('admin')->group(function () {
             ]);
             Route::get('/gallery/{id}', [\App\Http\Controllers\Admin\GalleryController::class, 'show'])->name('admin.gallery.show')->where('id', '.*');
             Route::delete('/gallery/image/{id}', [\App\Http\Controllers\Admin\GalleryController::class, 'removeImage'])->name('admin.gallery.remove-image');
+        });
+
+        // Course Management System (CMS)
+        Route::middleware(['admin.permission:manage_gallery'])->group(function () {
+            Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class)->names([
+                'index' => 'admin.courses.index',
+                'create' => 'admin.courses.create',
+                'store' => 'admin.courses.store',
+                'edit' => 'admin.courses.edit',
+                'update' => 'admin.courses.update',
+                'destroy' => 'admin.courses.destroy',
+            ]);
+            Route::post('/courses/{course}/modules', [\App\Http\Controllers\Admin\ModuleController::class, 'store'])->name('admin.modules.store');
+            Route::post('/modules/reorder', [\App\Http\Controllers\Admin\ModuleController::class, 'reorder'])->name('admin.modules.reorder');
+            Route::delete('/modules/{module}', [\App\Http\Controllers\Admin\ModuleController::class, 'destroy'])->name('admin.modules.destroy');
+            Route::post('/modules/{module}/lessons', [\App\Http\Controllers\Admin\LessonController::class, 'store'])->name('admin.lessons.store');
+            Route::post('/lessons/reorder', [\App\Http\Controllers\Admin\LessonController::class, 'reorder'])->name('admin.lessons.reorder');
+            Route::put('/lessons/{lesson}', [\App\Http\Controllers\Admin\LessonController::class, 'update'])->name('admin.lessons.update');
+            Route::delete('/lessons/{lesson}', [\App\Http\Controllers\Admin\LessonController::class, 'destroy'])->name('admin.lessons.destroy');
+
+            // Quiz Management
+            Route::post('/modules/{module}/quizzes', [\App\Http\Controllers\Admin\QuizController::class, 'store'])->name('admin.quizzes.store');
+            Route::put('/quizzes/{quiz}', [\App\Http\Controllers\Admin\QuizController::class, 'update'])->name('admin.quizzes.update');
+            Route::delete('/quizzes/{quiz}', [\App\Http\Controllers\Admin\QuizController::class, 'destroy'])->name('admin.quizzes.destroy');
+            Route::post('/quizzes/{quiz}/questions', [\App\Http\Controllers\Admin\QuizController::class, 'addQuestion'])->name('admin.quizzes.add-question');
+            Route::delete('/questions/{question}', [\App\Http\Controllers\Admin\QuizController::class, 'removeQuestion'])->name('admin.quizzes.remove-question');
         });
 
         // Form Builder Routes

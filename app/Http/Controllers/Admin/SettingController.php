@@ -28,7 +28,7 @@ class SettingController extends Controller
 
     public function update(Request $request)
     {
-        $featureKeys = ['allow_id_card_download', 'allow_certificate_download', 'allow_ticket_download', 'allow_referral_program'];
+        $featureKeys = ['allow_id_card_download', 'allow_certificate_download', 'allow_ticket_download', 'allow_referral_program', 'allow_course_cms'];
         $data = $request->except('_token');
         
         // Handle Favicon Upload
