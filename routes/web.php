@@ -367,5 +367,5 @@ Route::prefix('admin')->group(function () {
 });
 
 // Dynamic Public Forms
-Route::get('/f/{slug}', [\App\Http\Controllers\PublicFormController::class, 'show'])->name('forms.show');
-Route::post('/f/{slug}', [\App\Http\Controllers\PublicFormController::class, 'submit'])->name('forms.submit');
+Route::get('/f/{slug}', [\App\Http\Controllers\PublicFormController::class, 'show'])->name('public.forms.show');
+Route::post('/f/{slug}', [\App\Http\Controllers\PublicFormController::class, 'submit'])->name('public.forms.submit');

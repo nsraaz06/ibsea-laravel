@@ -59,7 +59,7 @@
                     @endif
 
                     @if($contactForm)
-                        <form action="{{ route('forms.submit', $contactForm->slug) }}" method="POST" class="space-y-6">
+                        <form action="{{ route('public.forms.submit', $contactForm->slug) }}" method="POST" class="space-y-6">
                             @csrf
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-1.5">

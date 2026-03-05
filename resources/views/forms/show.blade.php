@@ -58,7 +58,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('forms.submit', $form->slug) }}" method="POST" enctype="multipart/form-data" class="space-y-8">
+            <form action="{{ route('public.forms.submit', $form->slug) }}" method="POST" enctype="multipart/form-data" class="space-y-8">
                 @csrf
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -79,7 +79,7 @@
                                 <a href="{{ route('admin.submissions.index', $form->id) }}" class="w-10 h-10 rounded-xl bg-blue-50 text-blue-500 hover:bg-blue-500 hover:text-white transition-all flex items-center justify-center shadow-sm" title="View Submissions">
                                     <span class="material-icons text-lg">analytics</span>
                                 </a>
-                                <a href="{{ route('forms.show', $form->slug) }}" target="_blank" class="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center shadow-sm" title="View Public Form">
+                                <a href="{{ route('public.forms.show', $form->slug) }}" target="_blank" class="w-10 h-10 rounded-xl bg-slate-50 text-slate-500 hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center shadow-sm" title="View Public Form">
                                     <span class="material-icons text-lg">open_in_new</span>
                                 </a>
                                 <a href="{{ route('admin.forms.edit', $form) }}" class="w-10 h-10 rounded-xl bg-orange-50 text-accent hover:bg-accent hover:text-white transition-all flex items-center justify-center shadow-sm" title="Edit Form">
