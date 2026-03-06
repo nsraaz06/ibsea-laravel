@@ -38,7 +38,7 @@ class PaymentController extends Controller
             $item_name = $plan->title . " Membership";
             $amount = $plan->fee_numeric;
             $currency_symbol = $plan->currency_symbol ?? '₹';
-        } else {
+        } elseif ($type === 'Event') {
             $ticket = EventTicket::findOrFail($item_id);
             $item_name = $ticket->ticket_name . " | " . $ticket->event->name;
             
@@ -114,7 +114,7 @@ class PaymentController extends Controller
             $amount = $plan->fee_numeric;
             $currency = $plan->currency ?? 'INR';
             $item_name = $plan->title . " Membership";
-        } else {
+        } elseif ($type === 'Event') {
             $ticket = EventTicket::findOrFail($item_id);
             $today = now();
             $has_offer = (!empty($ticket->offer_price) && $ticket->offer_price > 0);

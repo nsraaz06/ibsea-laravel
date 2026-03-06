@@ -24,14 +24,45 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     @foreach($submission->form->fields as $field)
+                        @php 
+                            $name = $field['name'];
+                            $type = $field['type'] ?? 'text';
+                            $label = $field['label'] ?? ucwords(str_replace('_', ' ', $name));
+                            $value = $submission->data[$name] ?? null;
+                        @endphp
                         <div class="space-y-1 p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                            <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-1">{{ $field['label'] }}</label>
+                            <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-1">{{ $label }}</label>
                             <div class="text-sm font-bold text-slate-700 px-1">
-                                @php $value = $submission->data[$field['name']] ?? 'N/A'; @endphp
-                                @if(is_array($value))
+                                @if(empty($value))
+                                    <span class="text-slate-300 italic">No response</span>
+                                @elseif(in_array($type, ['image', 'file', 'file_multiple']))
+                                    <div class="flex flex-wrap gap-4 mt-2">
+                                        @php $files = is_array($value) ? $value : [$value]; @endphp
+                                        @foreach($files as $file)
+                                            @php 
+                                                $isImage = in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg']) || $type === 'image';
+                                            @endphp
+                                            <div class="relative group">
+                                                @if($isImage)
+                                                    <a href="{{ asset('storage/' . $file) }}" target="_blank" class="block border-2 border-white shadow-sm rounded-xl overflow-hidden hover:ring-2 hover:ring-primary transition-all">
+                                                        <img src="{{ asset('storage/' . $file) }}" class="w-24 h-24 object-cover" alt="Upload">
+                                                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+                                                            <span class="material-icons text-white">visibility</span>
+                                                        </div>
+                                                    </a>
+                                                @else
+                                                    <a href="{{ asset('storage/' . $file) }}" target="_blank" class="flex items-center gap-2 bg-white px-4 py-3 rounded-xl border border-slate-200 hover:border-primary hover:text-primary transition-all shadow-sm">
+                                                        <span class="material-icons text-primary">download</span>
+                                                        <span class="text-[10px] uppercase tracking-wider truncate max-w-[100px]">{{ basename($file) }}</span>
+                                                    </a>
+                                                @endif
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @elseif(is_array($value))
                                     {{ implode(', ', $value) }}
                                 @else
-                                    {{ $value }}
+                                    {!! nl2br(e($value)) !!}
                                 @endif
                             </div>
                         </div>
