@@ -40,14 +40,24 @@
 
             <h2>Submitted Intelligence</h2>
             @foreach($submission->form->fields as $field)
+                @php 
+                    $type = $field['type'] ?? 'text';
+                    $val = $submission->data[$field['name']] ?? 'N/A'; 
+                @endphp
                 <div class="field">
                     <span class="label">{{ $field['label'] }}</span>
                     <span class="value">
-                        @php $val = $submission->data[$field['name']] ?? 'N/A'; @endphp
-                        @if(is_array($val))
+                        @if(in_array($type, ['image', 'file', 'file_multiple']) && !empty($val) && $val !== 'N/A')
+                            @php $paths = is_array($val) ? $val : [$val]; @endphp
+                            @foreach($paths as $path)
+                                <a href="{{ url('storage/' . $path) }}" style="color: #f26f21; text-decoration: underline; font-weight: 800; display: block; margin-bottom: 5px;">
+                                    View / Download: {{ basename($path) }}
+                                </a>
+                            @endforeach
+                        @elseif(is_array($val))
                             {{ implode(', ', $val) }}
                         @else
-                            {{ $val }}
+                            {!! nl2br(e($val)) !!}
                         @endif
                     </span>
                 </div>
