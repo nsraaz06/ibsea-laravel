@@ -872,7 +872,7 @@
                             <span class="text-[9px] font-black text-primary uppercase tracking-widest mb-2">{{ $resource->category }}</span>
                             <h3 class="text-lg font-black text-secondary dark:text-white leading-tight mb-6 line-clamp-2 px-2 uppercase tracking-tight">{{ $resource->title }}</h3>
                             
-                            <a href="{{ route('public.resources.show', $resource->id) }}" target="_blank" class="mt-auto w-full bg-secondary text-white py-4 px-6 rounded-xl font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 transition-all hover:bg-primary hover:text-secondary group/btn">
+                            <a href="{{ route('public.resources.show', $resource->slug) }}" target="_blank" class="mt-auto w-full bg-secondary text-white py-4 px-6 rounded-xl font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 transition-all hover:bg-primary hover:text-secondary group/btn">
                                 <span class="material-symbols-outlined text-sm">visibility</span>
                                 View Resource
                             </a>
