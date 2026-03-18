@@ -9,7 +9,7 @@ class MemberResource extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'slug', 'category_id', 'category', 'description', 'file_path', 'cover_image', 'is_active'];
+    protected $fillable = ['title', 'slug', 'category_id', 'category', 'description', 'file_path', 'cover_image', 'is_active', 'show_on_home'];
 
     /**
      * Get the route key for the model.

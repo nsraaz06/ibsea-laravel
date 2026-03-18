@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-2 pt-6">
+                <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
                     <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex items-center justify-between">
                         <div>
                             <p class="text-sm font-black text-slate-800 uppercase tracking-tight">Immediate Deployment</p>
@@ -81,6 +81,17 @@
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" name="is_active" value="1" checked class="sr-only peer">
                             <div class="w-14 h-7 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-ibsea-green"></div>
+                        </label>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-black text-slate-800 uppercase tracking-tight">Home Page Carousel</p>
+                            <p class="text-[10px] text-slate-400 font-bold italic uppercase tracking-widest">Showcased on the homepage resource hub</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" name="show_on_home" value="1" class="sr-only peer">
+                            <div class="w-14 h-7 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
                         </label>
                     </div>
                 </div>

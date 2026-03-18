@@ -43,6 +43,15 @@
         0% { transform: translateY(0); }
         100% { transform: translateY(-50%); }
     }
+    @keyframes text-loop {
+        0%, 25% { transform: translateY(0); }
+        33%, 58% { transform: translateY(-25%); }
+        66%, 91% { transform: translateY(-50%); }
+        100% { transform: translateY(-75%); }
+    }
+    .animate-text-loop {
+        animation: text-loop 9s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+    }
 </style>
 @endpush
 
@@ -269,6 +278,28 @@
     </div>
 </section>
 
+<!-- Animated Text CTA Section -->
+<section class="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg class="w-full h-full font-bold" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor" class="text-primary"></path>
+        </svg>
+    </div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <h2 class="text-2xl md:text-5xl font-display font-black text-secondary dark:text-white uppercase tracking-tight leading-tight">
+            Become IBSEA Member Today to Expand Your<br class="hidden md:block">
+            <span class="text-primary block mt-6 md:inline-block h-[1.1em] overflow-hidden align-bottom relative min-w-full md:min-w-[600px] text-5xl md:text-9xl transition-all duration-500">
+                <span class="animate-text-loop flex flex-col items-center w-full">
+                    <span class="h-[1.1em] flex items-center justify-center">Network</span>
+                    <span class="h-[1.1em] flex items-center justify-center">Knowledge</span>
+                    <span class="h-[1.1em] flex items-center justify-center">Sales</span>
+                    <span class="h-[1.1em] flex items-center justify-center">Network</span>
+                </span>
+            </span>
+        </h2>
+    </div>
+</section>
+
 <section data-aos="fade-up" class="py-24 bg-white dark:bg-surface-dark relative overflow-hidden" id="schemes">
    
     <div class="container mx-auto px-4 lg:px-16">
@@ -301,9 +332,9 @@
                     <div class="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl">gavel</span>
                     </div>
-                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-300 mb-2">Government Initiatives & Policy Support</h4>
-                    <h3 class="text-2xl font-black uppercase tracking-wider mb-4 leading-tight">Access Central & State-Level Opportunities</h3>
-                    <p class="text-white/70 mb-8 flex-grow leading-relaxed font-medium">IBSEA connects entrepreneurs with vital government schemes, startup policies, funding programs, and regulatory updates. We help businesses leverage national and state-level initiatives to accelerate structured and sustainable growth.</p>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-300 mb-2">Government Support</h4>
+                    <h3 class="text-2xl font-black uppercase tracking-wider mb-4 leading-tight">Access Government Schemes & Support</h3>
+                    <p class="text-white/70 mb-8 flex-grow leading-relaxed font-medium">We help you find and use the right government schemes, funding programs, and startup benefits. Our goal is to make it easier for you to grow your business with the support already available.</p>
                     <a href="#" class="inline-flex items-center gap-2 bg-white text-emerald-800 font-black py-4 px-8 rounded-none text-[10px] uppercase tracking-widest hover:bg-slate-50 transition-all self-start mt-auto">
                         Explore Government Support
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -319,11 +350,11 @@
                     <div class="w-16 h-16 rounded-xl bg-primary flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl text-secondary">location_city</span>
                     </div>
-                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2">Empowering Tier 2 & Tier 3 Cities</h4>
-                    <h3 class="text-2xl font-black uppercase tracking-wider mb-4 leading-tight">Driving Inclusive Regional Entrepreneurship</h3>
-                    <p class="text-white/70 mb-8 flex-grow leading-relaxed font-medium">We actively support startups and MSMEs from Tier 2 and Tier 3 cities by providing mentorship, visibility, networking platforms, and ecosystem access—ensuring growth opportunities reach beyond metro cities and create balanced economic development.</p>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2">Tier 2 & Tier 3 Cities</h4>
+                    <h3 class="text-2xl font-black uppercase tracking-wider mb-4 leading-tight">Grow Your Business from Any City</h3>
+                    <p class="text-white/70 mb-8 flex-grow leading-relaxed font-medium">No matter where you are — Tier 2 or Tier 3 city — IBSEA helps you connect, learn, and grow. Get access to mentorship, networking, and opportunities usually available only in big cities.</p>
                     <a href="#" class="inline-flex items-center gap-2 bg-primary text-secondary font-black py-4 px-8 rounded-none text-[10px] uppercase tracking-widest hover:bg-amber-600 transition-all self-start mt-auto">
-                        Discover Regional Growth
+                        Discover Growth Opportunities
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
@@ -337,9 +368,9 @@
                     <div class="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl text-white">public</span>
                     </div>
-                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-white/80 mb-2">International Expansion & Global Support</h4>
-                    <h3 class="text-2xl font-black uppercase tracking-wider mb-4 leading-tight">From India to Global Markets</h3>
-                    <p class="text-white/70 mb-8 flex-grow leading-relaxed font-medium">IBSEA enables international networking, cross-border collaborations, B2B and B2G engagements, and global visibility to help Indian entrepreneurs expand confidently into international markets.</p>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-white/80 mb-2">International Growth</h4>
+                    <h3 class="text-2xl font-black uppercase tracking-wider mb-4 leading-tight">Take Your Business Global</h3>
+                    <p class="text-white/70 mb-8 flex-grow leading-relaxed font-medium">We help you connect with international businesses, partners, and markets. Expand beyond India and grow your business on a global level with the right support.</p>
                     <a href="#" class="inline-flex items-center gap-2 bg-white text-orange-600 font-black py-4 px-8 rounded-none text-[10px] uppercase tracking-widest hover:bg-slate-50 transition-all self-start mt-auto">
                         Expand Globally
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -585,6 +616,84 @@
     </div>
 </section>
 
+<!-- DPIIT Startup Booster Section -->
+<section class="py-20 bg-gradient-to-br from-white to-slate-50 dark:from-secondary dark:to-background-dark relative overflow-hidden" id="dpiit-booster">
+    <!-- Border Accents (Saffron & Green) -->
+    <div class="absolute top-0 left-0 w-full h-1.5 bg-[#FF9933]"></div>
+    <div class="absolute bottom-0 left-0 w-full h-1.5 bg-[#138808]"></div>
+    
+    <div class="container mx-auto px-4 lg:px-16">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <!-- Left: Impactful Image -->
+            <div class="w-full lg:w-1/2 relative group" data-aos="fade-right">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
+                    <img src="{{ asset('image/dppit startup.webp') }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="DPIIT Recognised Startup Booster">
+
+                </div>
+                <!-- Floating Badge -->
+                <div class="absolute -top-6 -right-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-[#FF9933]/20 flex flex-col items-center">
+                    <span class="text-[#FF9933] font-black text-2xl">FREE</span>
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Membership</span>
+                </div>
+            </div>
+
+            <!-- Right: Compelling Content -->
+            <div class="w-full lg:w-1/2" data-aos="fade-left">
+                <div class="inline-flex items-center gap-3 mb-6">
+                    <span class="h-[2px] w-10 bg-[#FF9933]"></span>
+                    <span class="text-[#000080] dark:text-blue-400 font-black uppercase tracking-[0.2em] text-[11px]">DPIIT Startup Booster</span>
+                    <span class="h-[2px] w-10 bg-[#138808]"></span>
+                </div>
+                
+                <h2 class="text-3xl md:text-5xl font-display font-black text-secondary dark:text-white leading-tight mb-6 uppercase">
+                    Free Booster Membership for <span class="text-[#FF9933]">DPIIT Recognised</span> Startups
+                </h2>
+
+                <p class="text-lg text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-8">
+                    IBSEA is offering <span class="text-[#138808] font-bold">FREE Booster Membership</span> to support your journey from startup to scale-up. Empowering India’s Recognised Startups to Scale Faster.
+                </p>
+
+                <!-- Benefits Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                    <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <span class="material-symbols-outlined text-[#138808]">verified</span>
+                        <span class="text-sm font-bold text-slate-600 dark:text-slate-300">IBSEA Conferences Access</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <span class="material-symbols-outlined text-[#138808]">groups</span>
+                        <span class="text-sm font-bold text-slate-600 dark:text-slate-300">Exclusive Community Entry</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <span class="material-symbols-outlined text-[#138808]">trending_up</span>
+                        <span class="text-sm font-bold text-slate-600 dark:text-slate-300">Growth Training Programs</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white dark:bg-slate-800/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <span class="material-symbols-outlined text-[#138808]">handshake</span>
+                        <span class="text-sm font-bold text-slate-600 dark:text-slate-300">Mentorship Opportunities</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#000080]/5 dark:bg-blue-900/10 p-6 rounded-2xl border-l-4 border-[#000080] mb-10">
+                    <h4 class="text-sm font-black text-[#000080] dark:text-blue-400 uppercase tracking-widest mb-2 italic">Why This Matters</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">
+                        We believe startups are the backbone of <span class="font-bold">Viksit Bharat @2047</span>. This initiative is our commitment to empowering recognized innovators across India.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://ibsea.in/f/registration-form" target="_blank" class="group inline-flex items-center justify-center gap-3 bg-[#FF9933] hover:bg-[#e68a2e] text-white px-8 py-5 rounded-none font-black text-xs uppercase tracking-widest transition-all shadow-xl hover:-translate-y-1">
+                        Claim Your Membership
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">rocket_launch</span>
+                    </a>
+                    <a href="{{ route('membership') }}" class="inline-flex items-center justify-center gap-3 bg-white dark:bg-slate-800 border-2 border-[#138808] text-[#138808] hover:bg-[#138808] hover:text-white px-8 py-5 rounded-none font-black text-xs uppercase tracking-widest transition-all shadow-md hover:-translate-y-1">
+                        Verify Eligibility
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Membership Plans Section -->
 <section data-aos="fade-up" class="py-20 bg-white dark:bg-background-dark relative overflow-hidden" id="membership">
     <!-- Background Decor -->
@@ -683,46 +792,39 @@
 <!-- Global Growth Banner Section -->
 <section class="py-12 px-6 overflow-hidden">
     <div class="max-w-7xl mx-auto">
-        <div class="relative bg-secondary rounded-[40px] overflow-hidden shadow-2xl border border-white/10 group">
-            <!-- Decorative Elements -->
-            <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full -mr-48 -mt-48 blur-3xl transition-transform duration-1000 group-hover:scale-110"></div>
-            <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
+        <div class="relative bg-gradient-to-br from-white to-slate-50 dark:from-secondary dark:to-background-dark rounded-[40px] overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 group">
+            <!-- Border Accents (Saffron & Green) -->
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-[#FF9933] z-20"></div>
+            <div class="absolute bottom-0 left-0 w-full h-1.5 bg-[#138808] z-20"></div>
             
             <div class="grid lg:grid-cols-2 gap-0 relative z-10">
-                <!-- Column 1: Branding -->
-                <div class="p-12 lg:p-20 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/5">
-                    <div class="inline-flex items-center gap-3 mb-6">
-                        <span class="h-[2px] w-10 bg-primary"></span>
-                        <span class="text-primary font-black uppercase tracking-[0.3em] text-[10px]">International Reach</span>
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter leading-none mb-6">
-                        Unlock <span class="text-primary">Global</span><br>Scalability
-                    </h2>
-                    <p class="text-slate-400 font-medium text-lg leading-relaxed max-w-md">
-                        Join our international network and connect with businesses across borders. Your journey to global influence starts here.
-                    </p>
+                <!-- Column 1: Image Asset -->
+                <div class="relative min-h-[400px] border-b lg:border-b-0 lg:border-r border-slate-100 dark:border-white/5 overflow-hidden group">
+                    <img src="{{ asset('international membership.webp') }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="International Membership">
                 </div>
                 
                 <!-- Column 2: CTA -->
-                <div class="p-12 lg:p-20 bg-white/5 backdrop-blur-sm flex flex-col justify-center items-start lg:items-center text-left lg:text-center">
+                <div class="p-12 lg:p-20 bg-white/40 dark:bg-white/5 backdrop-blur-sm flex flex-col justify-center items-start lg:items-center text-left lg:text-center">
                     <div class="max-w-sm">
-                        <div class="mb-8 hidden lg:block">
-                            <span class="material-icons text-6xl text-primary animate-pulse">public</span>
+                        <div class="inline-flex items-center gap-2 mb-4">
+                            <span class="h-[1px] w-6 bg-[#FF9933]"></span>
+                            <span class="text-[#000080] dark:text-blue-400 font-black uppercase tracking-[0.2em] text-[10px]">Global Reach</span>
+                            <span class="h-[1px] w-6 bg-[#138808]"></span>
                         </div>
-                        <h3 class="text-2xl font-black text-white uppercase tracking-tight mb-4">Start Your Global Journey</h3>
-                        <p class="text-slate-400 font-bold text-sm mb-10">Access matchmaking, speaking slots, and exclusive events. Join the IBSEA International network today.</p>
+                        <h3 class="text-3xl font-black text-secondary dark:text-white uppercase tracking-tight mb-4">Start Your <span class="text-[#FF9933]">Global Journey</span></h3>
+                        <p class="text-slate-600 dark:text-slate-400 font-bold text-sm mb-10">Access matchmaking, speaking slots, and exclusive events. Join the IBSEA International network today.</p>
                         
                         <div class="flex flex-col sm:flex-row gap-4 w-full">
                             <form action="{{ route('payment.checkout') }}" method="POST" class="flex-1">
                                 @csrf
                                 <input type="hidden" name="type" value="Membership">
                                 <input type="hidden" name="item_id" value="international">
-                                <button type="submit" class="w-full bg-primary text-secondary py-5 px-8 font-black text-xs uppercase tracking-widest transition-all hover:bg-white hover:text-secondary shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group-hover:scale-[1.05]">
+                                <button type="submit" class="w-full bg-[#FF9933] hover:bg-[#e68a2e] text-white py-5 px-8 font-black text-xs uppercase tracking-widest transition-all shadow-xl shadow-primary/10 flex items-center justify-center gap-2 group-hover:scale-[1.05]">
                                     Get Started
                                     <span class="material-icons text-sm">rocket_launch</span>
                                 </button>
                             </form>
-                            <a href="{{ route('membership') }}#international" class="flex-1 border-2 border-white/20 text-white py-5 px-8 font-black text-xs uppercase tracking-widest transition-all hover:bg-white/10 flex items-center justify-center gap-2">
+                            <a href="{{ route('membership') }}#international" class="flex-1 border-2 border-[#138808] text-[#138808] py-5 px-8 font-black text-xs uppercase tracking-widest transition-all hover:bg-[#138808] hover:text-white flex items-center justify-center gap-2">
                                 Know More
                                 <span class="material-icons text-sm">info</span>
                             </a>
@@ -733,6 +835,56 @@
         </div>
     </div>
 </section>
+
+<!-- Institutional Resource Hub Carousel -->
+@if($homeResources->count() > 0)
+<section data-aos="fade-up" class="py-20 bg-slate-50 dark:bg-background-dark overflow-hidden" id="resource-hub">
+    <div class="container mx-auto px-4 lg:px-16 text-center">
+        <div class="mb-16">
+            <div class="inline-flex items-center gap-3 mb-4">
+                <span class="h-[2px] w-10 bg-primary"></span>
+                <span class="text-primary font-bold uppercase tracking-[0.2em] text-[11px]">Knowledge Ecosystem</span>
+                <span class="h-[2px] w-10 bg-primary"></span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-display font-black text-secondary dark:text-white mt-2 uppercase tracking-tight">Institutional <span class="text-primary">Resource Hub</span></h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium italic">Manage official PDFs, templates, and mission-essential documents for our global alliance.</p>
+        </div>
+
+        <div class="relative px-12">
+            <!-- Navigation -->
+            <button class="resource-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-surface-dark shadow-xl text-secondary dark:text-white flex items-center justify-center transition-all hover:bg-primary hover:text-secondary group">
+                <span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">chevron_left</span>
+            </button>
+            <button class="resource-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-surface-dark shadow-xl text-secondary dark:text-white flex items-center justify-center transition-all hover:bg-primary hover:text-secondary group">
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">chevron_right</span>
+            </button>
+
+            <!-- Swiper Container -->
+            <div class="swiper resource-swiper overflow-hidden">
+                <div class="swiper-wrapper">
+                    @foreach($homeResources as $resource)
+                    <div class="swiper-slide h-auto py-10">
+                        <div class="h-full bg-white dark:bg-surface-dark rounded-3xl p-6 shadow-xl border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:-translate-y-3 flex flex-col items-center">
+                            <div class="w-full aspect-[3/4] rounded-2xl overflow-hidden mb-6 shadow-lg relative group/cover">
+                                <img src="{{ asset($resource->cover_image) }}" class="w-full h-full object-cover transition-transform duration-700 group-hover/cover:scale-110" alt="{{ $resource->title }}">
+                                <div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover/cover:opacity-100 transition-opacity"></div>
+                            </div>
+                            <span class="text-[9px] font-black text-primary uppercase tracking-widest mb-2">{{ $resource->category }}</span>
+                            <h3 class="text-lg font-black text-secondary dark:text-white leading-tight mb-6 line-clamp-2 px-2 uppercase tracking-tight">{{ $resource->title }}</h3>
+                            
+                            <a href="{{ asset($resource->file_path) }}" target="_blank" class="mt-auto w-full bg-secondary text-white py-4 px-6 rounded-xl font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 transition-all hover:bg-primary hover:text-secondary group/btn">
+                                <span class="material-symbols-outlined text-sm">download</span>
+                                Download Resource
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
 
 <!-- Upcoming Major Event Section -->
 <section data-aos="fade-up" class="py-20 bg-white dark:bg-gray-800 overflow-hidden">
@@ -1113,6 +1265,23 @@
         loop: true,
         autoplay: { delay: 5000 },
         pagination: { el: '.major-pagination', clickable: true }
+    });
+
+    // Institutional Resource Swiper
+    const resourceSwiper = new Swiper('.resource-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        navigation: {
+            nextEl: '.resource-next',
+            prevEl: '.resource-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+            1280: { slidesPerView: 4, spaceBetween: 30 }
+        }
     });
 
     // Upcoming Programs Swiper

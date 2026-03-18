@@ -29,6 +29,7 @@
                     <th class="px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-widest">Document Intelligence</th>
                     <th class="px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-widest">Global Sector</th>
                     <th class="px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-widest">Operational Status</th>
+                    <th class="px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-widest text-center">Home Carousel</th>
                     <th class="px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-widest">Created At</th>
                     <th class="px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-widest text-right">Strategic Actions</th>
                 </tr>
@@ -70,6 +71,13 @@
                         <span class="bg-slate-100 text-slate-400 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200">
                             Offline
                         </span>
+                        @endif
+                    </td>
+                    <td class="px-8 py-6 text-center">
+                        @if($resource->show_on_home)
+                        <span class="text-primary material-icons text-xl">star</span>
+                        @else
+                        <span class="text-slate-200 material-icons text-xl">star_outline</span>
                         @endif
                     </td>
                     <td class="px-8 py-6 text-sm font-bold text-slate-500">

@@ -7,6 +7,7 @@ use App\Models\MembershipPlan;
 use App\Models\Event;
 use App\Models\Post;
 use App\Models\Gallery;
+use App\Models\MemberResource;
 
 class HomeController extends Controller
 {
@@ -54,6 +55,11 @@ class HomeController extends Controller
             ->orderBy('order', 'asc')
             ->get();
 
+        $homeResources = MemberResource::where('show_on_home', true)
+            ->where('is_active', true)
+            ->latest()
+            ->get();
+
         $title = 'IBSEA | Home of International Business and Startups';
 
         return view('home', compact(
@@ -65,7 +71,8 @@ class HomeController extends Controller
             'events',
             'nationalPartners',
             'internationalPartners',
-            'mouPartners'
+            'mouPartners',
+            'homeResources'
         ));
     }
 }

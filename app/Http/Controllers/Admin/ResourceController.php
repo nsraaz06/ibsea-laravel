@@ -63,6 +63,7 @@ class ResourceController extends Controller
                 'description' => $request->description,
                 'file_path' => $filePath,
                 'is_active' => $request->has('is_active'),
+                'show_on_home' => $request->has('show_on_home'),
             ]);
 
             // Handle Cover Image
@@ -98,8 +99,14 @@ class ResourceController extends Controller
         ]);
 
         $category = ResourceCategory::find($request->category_id);
-        $data['category'] = $category->name;
-        $data['slug'] = \Illuminate\Support\Str::slug($request->title);
+        $data = [
+            'title' => $request->title,
+            'slug' => \Illuminate\Support\Str::slug($request->title),
+            'category_id' => $request->category_id,
+            'category' => $category->name,
+            'description' => $request->description,
+            'is_active' => $request->has('is_active'),
+        ];
 
         if ($request->hasFile('file')) {
             // Delete old file if exists
@@ -135,6 +142,7 @@ class ResourceController extends Controller
             $data['cover_image'] = $this->optimizer->generateDossierCover($resource, $category);
         }
 
+        $data['show_on_home'] = $request->has('show_on_home');
         $resource->update($data);
 
         return redirect()->route('admin.resources.index')->with('success', 'Resource updated successfully.');
