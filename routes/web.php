@@ -23,6 +23,10 @@ use App\Http\Controllers\PublicResourceController; // Added this line
 
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/about_chairman_Dr._Anshumaan_singh', function () {
+    return view('chairman');
+});
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/leadership', [LeadershipController::class, 'index'])->name('leadership');
 Route::get('/events', [EventController::class, 'index'])->name('events');
