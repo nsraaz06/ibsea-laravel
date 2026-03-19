@@ -40,7 +40,9 @@
         @include('partials.footer')
     @endif
 
-    @include('partials.pwa_prompt')
+    @if(request()->is('/'))
+        @include('partials.pwa_prompt')
+    @endif
     @stack('scripts')
 </body>
 </html>

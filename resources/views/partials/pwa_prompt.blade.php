@@ -1,5 +1,5 @@
 <!-- PWA Install Prompt -->
-<div id="pwa-install-prompt" class="fixed bottom-0 left-0 right-0 z-[10000] p-4 transform translate-y-full transition-transform duration-500 ease-in-out md:max-w-md md:left-auto md:right-6 md:bottom-6">
+<div id="pwa-install-prompt" class="fixed bottom-0 left-0 right-0 z-[10000] p-4 transform translate-y-full transition-transform duration-500 ease-in-out md:hidden">
     <div class="bg-white dark:bg-slate-800 rounded-[2rem] shadow-2xl border border-slate-100 dark:border-slate-700 overflow-hidden p-6 flex items-center gap-4 relative">
         <button onclick="closePwaPrompt()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
             <span class="material-icons text-sm">close</span>
