@@ -1046,25 +1046,37 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div class="space-y-8">
                 <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
-                    <div class="flex flex-col gap-6">
-                        <div class="flex items-start gap-6 mb-2">
+                    <div class="flex flex-col gap-8">
+                        <!-- Annual Calendar Block -->
+                        <div class="flex items-start gap-6">
                             <div class="bg-primary/10 text-primary p-4 rounded-lg">
-                                <span class="material-symbols-outlined text-4xl">travel_explore</span>
+                                <span class="material-symbols-outlined text-4xl">calendar_month</span>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">Framework For Growth</h3>
-                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Access our comprehensive ecosystem roadmaps, strategic engagement plans, and everything you need to know about IBSEA's vision for the future.</p>
+                                <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">IBSEA Annual Calendar 2026</h3>
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-3">Plan your year with our official schedule of events and strategic engagements.</p>
+                                <a href="https://ibsea.in/resources/ibsea-2026-annual-calendar/view" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-amber-600 font-black text-xs uppercase tracking-widest transition-colors">
+                                    <span class="material-symbols-outlined text-sm">visibility</span>
+                                    View PDF
+                                </a>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-4 mt-2">
-                            <a class="w-full bg-primary text-secondary dark:text-white text-center font-black py-5 px-6 rounded shadow-lg transition-all hover:bg-amber-600 flex items-center justify-center gap-3 uppercase tracking-widest text-xs" href="https://ibsea.in/resources/ibsea-2026-annual-calendar/view" target="_blank">
-                                <span class="material-symbols-outlined text-lg">calendar_month</span>
-                                IBSEA Annual Calendar 2026 Events
-                            </a>
-                            <a class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-secondary dark:hover:text-white text-center font-black py-5 px-6 rounded shadow-lg transition-all flex items-center justify-center gap-3 uppercase tracking-widest text-xs" href="https://ibsea.in/resources/everything-about-ibsea/view" target="_blank">
-                                <span class="material-symbols-outlined text-lg">info</span>
-                                Everything About IBSEA
-                            </a>
+                        
+                        <div class="w-full h-px bg-slate-100 dark:bg-slate-700"></div>
+
+                        <!-- Everything About IBSEA Block -->
+                        <div class="flex items-start gap-6">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 p-4 rounded-lg">
+                                <span class="material-symbols-outlined text-4xl">menu_book</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">Everything About IBSEA</h3>
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-3">Access our comprehensive ecosystem roadmaps and discover everything you need to know about IBSEA's vision for the future.</p>
+                                <a href="https://ibsea.in/resources/everything-about-ibsea/view" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-amber-600 font-black text-xs uppercase tracking-widest transition-colors">
+                                    <span class="material-symbols-outlined text-sm">visibility</span>
+                                    View PDF
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
