@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -92,28 +94,40 @@
         <section class="relative pt-32 pb-24 px-8 overflow-hidden bg-white" id="home">
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 z-10">
-                    <span
-                        class="text-secondary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Chairman
-                        IBSEA &amp; Startup Mentor</span>
+                    <p class="text-xl lg:text-3xl text-primary italic font-headline font-bold mb-8">
+                        Transforming Visions Into Ventures
+                    </p>
                     <h1
                         class="text-6xl lg:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tight mb-4">
                         Dr. Anshumaan Singh
                     </h1>
-                    <p class="text-xl lg:text-3xl text-primary italic font-headline font-bold mb-8">
-                        Transforming Visions Into Ventures
-                    </p>
+                    <span
+                        class="text-secondary font-headline font-bold tracking-widest text-sm mb-4 block">Chairman – International Business Startup and Entrepreneurs Association (IBSEA) </span>
+                    
                     <p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed font-bold border-l-4 border-primary pl-4">
                         “You don’t need more motivation — you need mentorship that works.”
                     </p>
                     <p class="text-lg text-on-surface-variant max-w-xl mb-6 leading-relaxed">
-                        If you're a startup founder trying to scale, a CEO navigating complexity, or a government executive building a future-ready India — you're in the right place.
+                        Dr. Anshumaan Singh is one of India’s most recognized figures in startup mentorship, strategic growth consulting, and leadership development. As the Chairman of the International Business Startup and Entrepreneurs Association (IBSEA), he has dedicated his career to empowering individuals, startups, and institutions to achieve measurable growth and long-term impact.
                     </p>
-                    <div class="flex gap-4 mb-10">
-                        <a href="https://www.linkedin.com/in/anshumaansinghofficial" target="_blank" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shadow-sm" title="LinkedIn">
-                            <span class="font-bold text-sm">In</span>
+                    <div class="flex flex-wrap gap-4 mb-10">
+                        <a href="https://facebook.com/anshumaansinghofficial" target="_blank" class="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center text-blue-600 border border-blue-600/20 hover:bg-blue-600 hover:text-white transition-all shadow-sm" title="Facebook">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
                         </a>
-                        <a href="https://www.facebook.com/share/15TKHLN6fJ/" target="_blank" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shadow-sm" title="Facebook">
-                            <span class="font-bold text-sm">Fb</span>
+                        <a href="https://linkedin.com/in/anshumaansinghofficial" target="_blank" class="w-10 h-10 rounded-full bg-blue-700/10 flex items-center justify-center text-blue-700 border border-blue-700/20 hover:bg-blue-700 hover:text-white transition-all shadow-sm" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="https://instagram.com/anshumaansinghofficial" target="_blank" class="w-10 h-10 rounded-full bg-pink-600/10 flex items-center justify-center text-pink-600 border border-pink-600/20 hover:bg-pink-600 hover:text-white transition-all shadow-sm" title="Instagram">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="https://x.com/anshu_maansingh" target="_blank" class="w-10 h-10 rounded-full bg-slate-900/10 flex items-center justify-center text-slate-900 border border-slate-900/20 hover:bg-slate-900 hover:text-white transition-all shadow-sm" title="X (Twitter)">
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
+                        </a>
+                        <a href="https://youtube.com/@anshumaansinghofficial" target="_blank" class="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-red-600 border border-red-600/20 hover:bg-red-600 hover:text-white transition-all shadow-sm" title="YouTube">
+                            <i class="fa-brands fa-youtube text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/918756952378" target="_blank" class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 border border-green-500/20 hover:bg-green-500 hover:text-white transition-all shadow-sm" title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
                         </a>
                     </div>
                     <div class="flex flex-wrap gap-4">
@@ -142,7 +156,7 @@
             </div>
         </section>
         <!-- Statue Metrics (About Summary) -->
-        <section class="bg-tertiary py-20 px-8">
+        <section class="bg-blue-900 py-20 px-8">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div class="text-center md:text-left">
@@ -178,14 +192,14 @@
                 <div class="lg:w-1/2">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-surface-container-lowest p-1 rounded-lg shadow-sm">
-                            <img alt="Corporate Workshop" class="rounded-lg object-cover h-64 w-full"
+                            <img alt="Corporate Workshop" class="rounded-lg object-cover h-100 w-full"
                                 data-alt="Dr. Singh conducting a corporate workshop session"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmNdsa423zpfIS0yMO7zQ1aiTparhgPEsTG7gJfuwqv_TMF1F_ceqJTWncdqQBRT14ftSVkBRPTGYD9Rqeba93nNoRRh9lUKDPJdZ8pIAO_8Yo2yGFgpDuXjFbTQLxLd3g57oAqtU9uFp3Z6DVLug_yRZSycwlULvU0E_CQklzC9f_0_P_qH02RufsVFnrCleMXRuboJ6nPYaSZ5YE-PtIpLEqxiMWxXhyTkP8sJRLnePiC5Kt78H0kBqs1ZG8KC0UU2IPBo6-dTE" />
+                                src="https://ibsea.in/uploads/members/698f90b40b785.jpg" />
                         </div>
                         <div class="bg-surface-container-lowest p-1 rounded-lg shadow-sm mt-8">
                             <img alt="Leadership Speech" class="rounded-lg object-cover h-64 w-full"
                                 data-alt="Dr. Singh delivering a keynote speech at a summit"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUj20ci5zIMQ9TT5byH4_OHt5MLSCRrPsFUlzX5qgOQ6oX5XVFS1XWUN_fkU6xZrVbnovi7SeWDtGSGc2jYyGVpZOUZ605jQ4SZziBppGuw6SlanmShaFgfjMVf-5amHEeZwzzox50ClqgrKBJf0EJmnox_2GV_EIeqhRGB95iWGfKar9YOvSNgahgD5OZ7VwCbUYhBwxT3QSsKXzG-TAWogTPSQPzOdnB1lmVu1w1i8-kfJL8rWodlzY6t9SdPpcK9VYtk6YIHwQ" />
+                                src="{{ asset('image/anshumaan-image-building-1536x1536.jpg') }}" />
                         </div>
                     </div>
                 </div>
@@ -318,7 +332,7 @@
         <!-- Mission Section -->
         <section class="py-24 px-8 bg-white relative">
             <div
-                class="max-w-7xl mx-auto bg-slate-900 rounded-[2rem] p-12 lg:p-20 text-white flex flex-col lg:flex-row gap-16 overflow-hidden">
+                class="mx-auto bg-slate-900 rounded-[2rem] p-12 lg:p-20 text-white flex flex-col align-center justify-center text-center lg:flex-row gap-16 overflow-hidden">
                 <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent"></div>
                 <div class="lg:w-3/5 relative z-10">
                     <h2 class="text-4xl lg:text-5xl font-headline font-extrabold mb-8 leading-tight">
@@ -329,27 +343,14 @@
                         "Our goal is to establish 100 Centers of Excellence across India by 2030, ensuring that every
                         Tier-2 and Tier-3 city becomes a hub of entrepreneurial excellence."
                     </p>
-                    <div class="flex items-center gap-6">
-                        <div class="bg-white/10 px-6 py-4 rounded-xl border border-white/10">
-                            <span
-                                class="text-primary-container font-headline font-bold text-2xl block">India@2047</span>
-                            <span class="text-xs text-slate-400 tracking-widest uppercase">The Vision</span>
+        
+                    <div class="bg-surface-container-lowest p-1 rounded-lg shadow-sm mt-8">
+                            <img alt="Leadership Speech" class="rounded-lg object-cover h-30 w-full"
+                                data-alt="Dr. Singh delivering a keynote speech at a summit"
+                                src="{{ asset('image/6990427a9c3d0.webp') }}" />
                         </div>
-                    </div>
                 </div>
-                <div class="lg:w-2/5 flex items-center justify-center relative">
-                    <div
-                        class="w-full aspect-square border-2 border-white/5 rounded-full flex items-center justify-center p-8">
-                        <div
-                            class="w-full aspect-square border-2 border-primary/20 rounded-full flex items-center justify-center p-8">
-                            <div
-                                class="bg-primary-container text-on-primary-container w-full aspect-square rounded-full flex flex-col items-center justify-center p-6 text-center shadow-2xl">
-                                <span class="text-4xl font-headline font-extrabold">100</span>
-                                <span class="text-sm font-bold uppercase tracking-tighter mt-1">Centers of Excellence</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <!-- Media & Speaking -->
@@ -523,7 +524,7 @@
                                     </div>
                                     <div>
                                         <p class="text-white/60 text-sm uppercase font-bold">Headquarters</p>
-                                        <p class="text-lg">New Delhi, India</p>
+                                        <p class="text-lg">1/22/Asaf Ali Road, New Delhi, India</p>
                                     </div>
                                 </div>
                             </div>
@@ -547,53 +548,7 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-slate-900 dark:bg-black w-full py-12 px-8 mt-24 border-t border-slate-800">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
-            <div class="md:col-span-1">
-                <div class="text-lg font-bold text-white uppercase tracking-widest mb-6">Dr. Anshumaan Singh</div>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6 font-body">Architecting the future of Indian
-                    entrepreneurship. Building leaders, scaling ventures, creating impact.</p>
-            </div>
-            <div>
-                <h4 class="text-white font-medium mb-6">Quick Links</h4>
-                <ul class="space-y-4">
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block"
-                            href="https://www.linkedin.com/in/anshumaansinghofficial" target="_blank">LinkedIn</a></li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block"
-                            href="https://www.facebook.com/share/15TKHLN6fJ/" target="_blank">Facebook</a></li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block"
-                            href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-medium mb-6">Initiatives</h4>
-                <ul class="space-y-4">
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="{{ url('/') }}">IBSEA India</a>
-                    </li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="#services">Startup
-                            Mentorship</a></li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="#impact">National Ecosystem</a></li>
-                </ul>
-            </div>
-            <div>
-                 <h4 class="text-white font-medium mb-6">Subscribe</h4>
-                 <p class="text-slate-400 text-xs mb-4">Subscribe for monthly leadership insights.</p>
-                 <div class="flex border-b border-slate-700 pb-2">
-                     <input class="bg-transparent border-none text-white focus:ring-0 w-full text-sm" placeholder="Email Address" type="email" />
-                     <button class="text-orange-400"><span class="material-symbols-outlined">arrow_forward</span></button>
-                 </div>
-             </div>
-        </div>
-        <div
-            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="font-['Inter'] text-sm text-slate-400">© 2026 Dr. Anshumaan Singh. All Rights Reserved.</p>
-            <div class="flex gap-8">
-                <span class="text-orange-500 font-bold text-xs tracking-widest uppercase">Leadership</span>
-                <span class="text-orange-500 font-bold text-xs tracking-widest uppercase">Innovation</span>
-                <span class="text-orange-500 font-bold text-xs tracking-widest uppercase">Nation Building</span>
-            </div>
-        </div>
-    </footer>
+    @include('partials.footer')
 </body>
 
 </html>
