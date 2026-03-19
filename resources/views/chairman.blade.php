@@ -86,35 +86,7 @@
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
     <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm">
-        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <div class="text-xl font-extrabold text-slate-900 font-headline tracking-tight">
-                Dr. Anshumaan Singh
-            </div>
-            <div class="hidden md:flex gap-8 items-center">
-                <a class="text-orange-600 border-b-2 border-orange-500 pb-1 font-headline font-bold"
-                    href="#home">Home</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
-                    href="#about">About</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
-                    href="#services">Services</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
-                    href="#impact">Impact</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
-                    href="#media">Media</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
-                    href="#awards">Awards</a>
-                <a href="{{ url('/') }}"
-                    class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-md font-bold hover:scale-105 transition-transform duration-300">
-                    Back to IBSEA
-                </a>
-            </div>
-            <div class="md:hidden">
-                <span class="material-symbols-outlined text-on-surface">menu</span>
-            </div>
-        </div>
-        <div class="bg-gradient-to-r from-orange-500/10 to-transparent h-[1px] w-full absolute bottom-0"></div>
-    </nav>
+    @include('partials.header')
     <main>
         <!-- Hero Section -->
         <section class="relative pt-32 pb-24 px-8 overflow-hidden bg-white" id="home">
@@ -133,9 +105,17 @@
                     <p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed font-bold border-l-4 border-primary pl-4">
                         “You don’t need more motivation — you need mentorship that works.”
                     </p>
-                    <p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    <p class="text-lg text-on-surface-variant max-w-xl mb-6 leading-relaxed">
                         If you're a startup founder trying to scale, a CEO navigating complexity, or a government executive building a future-ready India — you're in the right place.
                     </p>
+                    <div class="flex gap-4 mb-10">
+                        <a href="https://www.linkedin.com/in/anshumaansinghofficial" target="_blank" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shadow-sm" title="LinkedIn">
+                            <span class="font-bold text-sm">In</span>
+                        </a>
+                        <a href="https://www.facebook.com/share/15TKHLN6fJ/" target="_blank" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shadow-sm" title="Facebook">
+                            <span class="font-bold text-sm">Fb</span>
+                        </a>
+                    </div>
                     <div class="flex flex-wrap gap-4">
                         <a href="#contact"
                             class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-md font-bold text-lg shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all">
@@ -393,26 +373,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="https://youtu.be/JiTi11TnVKs" target="_blank" class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden relative group shadow-lg">
-                            <div
-                                class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all flex items-center justify-center">
-                                <span
-                                    class="material-symbols-outlined text-white text-7xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
-                            </div>
-                            <img alt="TEDx Talk" class="w-full h-full object-cover"
-                                src="https://img.youtube.com/vi/JiTi11TnVKs/maxresdefault.jpg" />
-                        </a>
+                        <div class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/JiTi11TnVKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
                     <div class="space-y-8">
-                        <a href="https://youtu.be/DOWksCIv8FY" target="_blank" class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden relative group shadow-lg">
-                            <div
-                                class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all flex items-center justify-center">
-                                <span
-                                    class="material-symbols-outlined text-white text-7xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
-                            </div>
-                            <img alt="Keynote Speech" class="w-full h-full object-cover"
-                                src="https://img.youtube.com/vi/DOWksCIv8FY/maxresdefault.jpg" />
-                        </a>
+                        <div class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/DOWksCIv8FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                         <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
                             <div class="flex items-start gap-6">
                                 <div class="bg-blue-50 text-tertiary p-4 rounded-lg">
