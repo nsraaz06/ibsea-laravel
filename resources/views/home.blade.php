@@ -1061,7 +1061,7 @@
                     </div>
                 </div>
                 <div class="aspect-video bg-secondary dark:bg-slate-900 rounded-2xl overflow-hidden relative shadow-lg">
-                    <video class="w-full h-full object-cover" controls preload="metadata">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline preload="metadata">
                         <source src="{{ asset('image/key initiatives (1).mp4') }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
