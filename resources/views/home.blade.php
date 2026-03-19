@@ -1036,6 +1036,65 @@
     </div>
 </section>
 
+<!-- IBSEA Intro & Initiatives Section -->
+<section data-aos="fade-up" class="py-20 bg-gray-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800" id="intro-initiatives">
+    <div class="container mx-auto px-4 lg:px-16">
+        <div class="flex items-center gap-4 mb-16">
+            <div class="h-1 w-12 bg-primary"></div>
+            <h2 class="text-3xl md:text-4xl font-display font-black text-secondary dark:text-white uppercase tracking-tight">IBSEA Intro &amp; Initiatives</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-start gap-6 mb-2">
+                            <div class="bg-primary/10 text-primary p-4 rounded-lg">
+                                <span class="material-symbols-outlined text-4xl">travel_explore</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">Framework For Growth</h3>
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Access our comprehensive ecosystem roadmaps, strategic engagement plans, and everything you need to know about IBSEA's vision for the future.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 mt-2">
+                            <a class="w-full bg-primary text-secondary dark:text-white text-center font-black py-5 px-6 rounded shadow-lg transition-all hover:bg-amber-600 flex items-center justify-center gap-3 uppercase tracking-widest text-xs" href="https://ibsea.in/resources/ibsea-2026-annual-calendar/view" target="_blank">
+                                <span class="material-symbols-outlined text-lg">calendar_month</span>
+                                IBSEA Annual Calendar 2026 Events
+                            </a>
+                            <a class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-secondary dark:hover:text-white text-center font-black py-5 px-6 rounded shadow-lg transition-all flex items-center justify-center gap-3 uppercase tracking-widest text-xs" href="https://ibsea.in/resources/everything-about-ibsea/view" target="_blank">
+                                <span class="material-symbols-outlined text-lg">info</span>
+                                Everything About IBSEA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-video bg-secondary dark:bg-slate-900 rounded-2xl overflow-hidden relative shadow-lg">
+                    <video class="w-full h-full object-cover" controls preload="metadata">
+                        <source src="{{ asset('image/key initiatives (1).mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden relative shadow-sm">
+                    <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/3B5yI2h9aAE" title="IBSEA Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <div class="flex items-start gap-6">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 p-4 rounded-lg">
+                            <span class="material-symbols-outlined text-4xl">rocket_launch</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">Key Initiatives</h3>
+                            <p class="text-slate-600 dark:text-slate-400 font-medium">Watch our global introductory campaigns and understand how we are bridging the gap between academia and industry on a national scale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Upcoming Events Section -->
 <section data-aos="fade-up" class="py-20 bg-white dark:bg-surface-dark overflow-hidden">
     <div class="container mx-auto px-4 lg:px-16">
