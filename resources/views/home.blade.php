@@ -249,7 +249,7 @@
                             <span class="material-symbols-outlined text-secondary text-2xl">handshake</span>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-secondary dark:text-white leading-none">65+</h4>
+                            <h4 class="text-xl font-bold text-secondary dark:text-white leading-none">70+</h4>
                             <p class="text-xs text-slate-500 font-bold uppercase tracking-tighter">MoU Partners</p>
                         </div>
                     </div>
@@ -381,6 +381,62 @@
     </div>
 </section>
 
+<!-- IBSEA Intro & Initiatives Section -->
+<section data-aos="fade-up" class="py-20 bg-gray-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800" id="intro-initiatives">
+    <div class="container mx-auto px-4 lg:px-16">
+        <div class="flex items-center gap-4 mb-16">
+            <div class="h-1 w-12 bg-primary"></div>
+            <h2 class="text-3xl md:text-4xl font-display font-black text-secondary dark:text-white uppercase tracking-tight">IBSEA Intro &amp; Initiatives</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <div class="flex items-start gap-6">
+                        <div class="bg-primary/10 text-primary p-4 rounded-lg">
+                            <span class="material-symbols-outlined text-4xl">calendar_month</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">IBSEA Annual Calendar 2026</h3>
+                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-3">Plan your year with our official schedule of events and strategic engagements.</p>
+                            <a href="https://ibsea.in/resources/ibsea-2026-annual-calendar/view" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-amber-600 font-black text-xs uppercase tracking-widest transition-colors">
+                                <span class="material-symbols-outlined text-sm">visibility</span>
+                                View PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="aspect-video bg-secondary dark:bg-slate-900 rounded-2xl overflow-hidden relative shadow-lg">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline preload="metadata">
+                        <source src="{{ asset('image/key initiatives (1).mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden relative shadow-sm">
+                    <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/3B5yI2h9aAE" title="IBSEA Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <div class="flex items-start gap-6">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 p-4 rounded-lg">
+                            <span class="material-symbols-outlined text-4xl">menu_book</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">Everything About IBSEA</h3>
+                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-3">Access our comprehensive ecosystem roadmaps and discover everything you need to know about IBSEA's vision for the future.</p>
+                            <a href="https://ibsea.in/resources/everything-about-ibsea/view" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-amber-600 font-black text-xs uppercase tracking-widest transition-colors">
+                                <span class="material-symbols-outlined text-sm">visibility</span>
+                                View PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- Global and National Strategic Partners Section -->
 <section class="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800 overflow-hidden">
     <div class="container mx-auto px-4 lg:px-16 mb-12 text-center" data-aos="fade-up">
@@ -481,7 +537,7 @@
                     <span class="material-symbols-outlined text-5xl">handshake</span>
                 </div>
                 <div class="text-4xl md:text-5xl font-black mb-1 flex items-baseline">
-                    <span class="counter" data-target="65">0</span><span class="text-primary text-2xl md:text-3xl ml-0.5">+</span>
+                    <span class="counter" data-target="70">0</span><span class="text-primary text-2xl md:text-3xl ml-0.5">+</span>
                 </div>
                 <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400">MoU Partners</p>
             </div>
@@ -521,19 +577,19 @@
                     <span class="material-symbols-outlined text-5xl">groups</span>
                 </div>
                 <div class="text-4xl md:text-5xl font-black mb-1 flex items-baseline">
-                    <span class="counter" data-target="35">0</span><span class="text-primary text-2xl md:text-3xl ml-0.5">+</span>
+                    <span class="counter" data-target="50">0</span><span class="text-primary text-2xl md:text-3xl ml-0.5">+</span>
                 </div>
                 <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400">Influencers</p>
             </div>
             <!-- Stat 6: Strategic Sectors -->
             <div class="flex flex-col items-center text-center group">
                 <div class="text-primary mb-3 transform group-hover:scale-110 transition-transform duration-300">
-                    <span class="material-symbols-outlined text-5xl">category</span>
+                    <span class="material-symbols-outlined text-5xl">account_balance</span>
                 </div>
                 <div class="text-4xl md:text-5xl font-black mb-1 flex items-baseline">
-                    <span class="counter" data-target="21">0</span><span class="text-primary text-2xl md:text-3xl ml-0.5">+</span>
+                    <span class="counter" data-target="50">0</span><span class="text-primary text-2xl md:text-3xl ml-0.5">+</span>
                 </div>
-                <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400">Strategic Sectors</p>
+                <p class="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400">Investors</p>
             </div>
         </div>
     </div>
@@ -1036,60 +1092,6 @@
     </div>
 </section>
 
-<!-- IBSEA Intro & Initiatives Section -->
-<section data-aos="fade-up" class="py-20 bg-gray-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800" id="intro-initiatives">
-    <div class="container mx-auto px-4 lg:px-16">
-        <div class="flex items-center gap-4 mb-16">
-            <div class="h-1 w-12 bg-primary"></div>
-            <h2 class="text-3xl md:text-4xl font-display font-black text-secondary dark:text-white uppercase tracking-tight">IBSEA Intro &amp; Initiatives</h2>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div class="space-y-8">
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
-                    <div class="flex items-start gap-6">
-                        <div class="bg-primary/10 text-primary p-4 rounded-lg">
-                            <span class="material-symbols-outlined text-4xl">calendar_month</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">IBSEA Annual Calendar 2026</h3>
-                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-3">Plan your year with our official schedule of events and strategic engagements.</p>
-                            <a href="https://ibsea.in/resources/ibsea-2026-annual-calendar/view" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-amber-600 font-black text-xs uppercase tracking-widest transition-colors">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                View PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="aspect-video bg-secondary dark:bg-slate-900 rounded-2xl overflow-hidden relative shadow-lg">
-                    <video class="w-full h-full object-cover" autoplay loop muted playsinline preload="metadata">
-                        <source src="{{ asset('image/key initiatives (1).mp4') }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            <div class="space-y-8">
-                <div class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-2xl overflow-hidden relative shadow-sm">
-                    <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/3B5yI2h9aAE" title="IBSEA Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
-                    <div class="flex items-start gap-6">
-                        <div class="bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 p-4 rounded-lg">
-                            <span class="material-symbols-outlined text-4xl">menu_book</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-display font-black text-secondary dark:text-white mb-2 uppercase">Everything About IBSEA</h3>
-                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-3">Access our comprehensive ecosystem roadmaps and discover everything you need to know about IBSEA's vision for the future.</p>
-                            <a href="https://ibsea.in/resources/everything-about-ibsea/view" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-amber-600 font-black text-xs uppercase tracking-widest transition-colors">
-                                <span class="material-symbols-outlined text-sm">visibility</span>
-                                View PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Upcoming Events Section -->
 <section data-aos="fade-up" class="py-20 bg-white dark:bg-surface-dark overflow-hidden">
@@ -1161,7 +1163,14 @@
                     <span class="h-[2px] w-8 bg-primary"></span>
                     <span class="text-primary font-black uppercase tracking-widest text-[10px]">Ecosystem Impact</span>
                 </div>
-                <h2 class="text-4xl font-display font-black text-secondary dark:text-white uppercase mb-12 tracking-tight">Member Voices</h2>
+                <h2 class="text-4xl font-display font-black text-secondary dark:text-white mb-4 uppercase tracking-tight">Member Voices</h2>
+               <div class="gap-4 mb-10">
+<p class="text-lg text-slate-600 dark:text-slate-300 italic leading-relaxed font-medium">Give review on google and get a chance to win exciting Gift Hamper</p>
+                  <a href="https://g.page/r/CT4Ugk1ZGdEYEBM/review" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-amber-600 font-black text-xs uppercase tracking-widest transition-colors">
+                                <span class="material-symbols-outlined text-sm">visibility</span>
+                                Review Now 
+                            </a>
+               </div> 
                 
                 <div class="swiper voices-swiper w-[450px] md:w-full rounded-xl relative">
                     <div class="swiper-wrapper">
