@@ -1165,46 +1165,36 @@
                 
                 <div class="swiper voices-swiper w-[450px] md:w-full rounded-xl relative">
                     <div class="swiper-wrapper">
-                        <!-- Voice 1 -->
+                        @forelse($testimonials as $testimonial)
                         <div class="swiper-slide h-auto">
-                            <div class="bg-white dark:bg-surface-dark p-6 md:p-10 rounded-none shadow-2xl border border-slate-100 dark:border-slate-800 relative group overflow-hidden h-full">
+                            <div class="bg-white dark:bg-surface-dark p-6 md:p-10 rounded-none shadow-2xl border border-slate-100 dark:border-slate-800 relative group overflow-hidden h-full flex flex-col">
                                 <span class="material-symbols-outlined text-6xl md:text-8xl text-primary/5 absolute -top-4 -right-4 transition-transform group-hover:scale-110">format_quote</span>
-                                <div class="relative z-10">
-                                    <p class="text-lg text-slate-600 dark:text-slate-300 italic mb-10 leading-relaxed font-medium">
-                                        "Being part of IBSEA has opened doors I never knew existed. The cross-border networking opportunities and the strategic insights from Bharat Ke Maharathi conclaves have played a pivotal role in our recent expansion."
+                                <div class="relative z-10 flex flex-col flex-grow">
+                                    <p class="text-lg text-slate-600 dark:text-slate-300 italic mb-10 leading-relaxed font-medium flex-grow">
+                                        "{!! nl2br(e($testimonial->content)) !!}"
                                     </p>
-                                    <div class="flex items-center gap-5">
-                                        <div class="w-16 h-16 rounded-xl overflow-hidden bg-slate-200 border-2 border-white dark:border-slate-700 shadow-md">
-                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover" alt="Member">
+                                    <div class="flex items-center gap-5 mt-auto">
+                                        <div class="w-16 h-16 rounded-xl overflow-hidden bg-slate-200 border-2 border-white dark:border-slate-700 shadow-md flex-shrink-0">
+                                            <img src="{{ $testimonial->image_url }}" class="w-full h-full object-cover" alt="{{ $testimonial->name }}">
                                         </div>
                                         <div>
-                                            <h4 class="font-black text-secondary dark:text-white uppercase tracking-wider">Arjun Mehta</h4>
-                                            <p class="text-[10px] font-black text-primary uppercase tracking-widest">Founder, Mehta Tech Sol</p>
+                                            <h4 class="font-black text-secondary dark:text-white uppercase tracking-wider">{{ $testimonial->name }}</h4>
+                                            @if($testimonial->designation)
+                                            <p class="text-[10px] font-black text-primary uppercase tracking-widest">{{ $testimonial->designation }}</p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Voice 2 -->
+                        @empty
                         <div class="swiper-slide h-auto">
-                            <div class="bg-white dark:bg-surface-dark p-6 md:p-10 rounded-none shadow-2xl border border-slate-100 dark:border-slate-800 relative group overflow-hidden h-full">
-                                <span class="material-symbols-outlined text-6xl md:text-8xl text-primary/5 absolute -top-4 -right-4">format_quote</span>
-                                <div class="relative z-10">
-                                    <p class="text-lg text-slate-600 dark:text-slate-300 italic mb-10 leading-relaxed font-medium">
-                                        "The mentorship access via IBSEA is unparalleled. Connecting with global industry stalwarts through the Director Mentor Conclave helped us refine our market positioning for a successful Series A."
-                                    </p>
-                                    <div class="flex items-center gap-5">
-                                        <div class="w-16 h-16 rounded-xl overflow-hidden bg-slate-200 border-2 border-white dark:border-slate-700 shadow-md">
-                                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover" alt="Member">
-                                        </div>
-                                        <div>
-                                            <h4 class="font-black text-secondary dark:text-white uppercase tracking-wider">Priya Sharma</h4>
-                                            <p class="text-[10px] font-black text-primary uppercase tracking-widest">CEO, InnovateHub</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-10 rounded-none border border-dashed border-slate-200 dark:border-slate-700 text-center flex flex-col items-center justify-center h-full">
+                                <span class="material-symbols-outlined text-4xl text-slate-300 mb-4">forum</span>
+                                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs">More Voices Coming Soon</p>
                             </div>
                         </div>
+                        @endforelse
                     </div>
                     <div class="flex gap-4 mt-8">
                         <button class="voices-prev w-12 h-12 rounded-none border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all bg-white dark:bg-slate-900 shadow-sm">

@@ -251,6 +251,16 @@ Route::prefix('admin')->group(function () {
             Route::get('/settings', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');
             Route::get('/settings/payment', [\App\Http\Controllers\Admin\SettingController::class, 'payment'])->name('admin.settings.payment');
             Route::post('/settings', [\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin.settings.update');
+            
+            // Homepage Testimonials
+            Route::resource('testimonials', \App\Http\Controllers\Admin\TestimonialController::class)->names([
+                'index' => 'admin.testimonials.index',
+                'create' => 'admin.testimonials.create',
+                'store' => 'admin.testimonials.store',
+                'edit' => 'admin.testimonials.edit',
+                'update' => 'admin.testimonials.update',
+                'destroy' => 'admin.testimonials.destroy',
+            ]);
         });
 
         // Gallery & Resource Management

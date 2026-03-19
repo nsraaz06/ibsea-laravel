@@ -251,8 +251,8 @@
             @endif
 
             @if(auth('admin')->user()->hasPermission('manage_settings'))
-            <div x-data="{ open: {{ Request::routeIs('admin.settings.*') ? 'true' : 'false' }} }">
-                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all {{ Request::routeIs('admin.settings.*') ? 'font-semibold shadow-lg bg-primary/10 text-white' : 'text-slate-300' }}">
+            <div x-data="{ open: {{ Request::routeIs('admin.settings.*') || Request::routeIs('admin.testimonials.*') ? 'true' : 'false' }} }">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all {{ Request::routeIs('admin.settings.*') || Request::routeIs('admin.testimonials.*') ? 'font-semibold shadow-lg bg-primary/10 text-white' : 'text-slate-300' }}">
                     <div class="flex items-center gap-3">
                         <span class="material-icons">settings</span>
                         Portal Settings
@@ -265,6 +265,9 @@
                     </a>
                     <a href="{{ route('admin.settings.payment') }}" class="flex items-center gap-3 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all {{ Request::routeIs('admin.settings.payment') ? 'text-accent' : 'text-slate-400 hover:text-white' }}">
                         Payment Gateways
+                    </a>
+                    <a href="{{ route('admin.testimonials.index') }}" class="flex items-center gap-3 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all {{ Request::routeIs('admin.testimonials.*') ? 'text-accent' : 'text-slate-400 hover:text-white' }}">
+                        Ecosystem Voices
                     </a>
                 </div>
             </div>

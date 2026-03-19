@@ -60,6 +60,10 @@ class HomeController extends Controller
             ->latest()
             ->get();
 
+        $testimonials = \App\Models\Testimonial::where('is_active', true)
+            ->orderBy('sort_order')
+            ->get();
+
         $title = 'IBSEA | Home of International Business and Startups';
 
         return view('home', compact(
@@ -72,7 +76,8 @@ class HomeController extends Controller
             'nationalPartners',
             'internationalPartners',
             'mouPartners',
-            'homeResources'
+            'homeResources',
+            'testimonials'
         ));
     }
 }
