@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="scroll-smooth" lang="en">
 
 <head>
@@ -93,13 +92,20 @@
                 Dr. Anshumaan Singh
             </div>
             <div class="hidden md:flex gap-8 items-center">
-                <a class="text-orange-600 border-b-2 border-orange-500 pb-1 font-headline font-bold" href="#home">Home</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold" href="#about">About</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold" href="#services">Services</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold" href="#impact">Impact</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold" href="#media">Media</a>
-                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold" href="#contact">Contact</a>
-                <a href="{{ url('/') }}" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-md font-bold hover:scale-105 transition-transform duration-300">
+                <a class="text-orange-600 border-b-2 border-orange-500 pb-1 font-headline font-bold"
+                    href="#home">Home</a>
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
+                    href="#about">About</a>
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
+                    href="#services">Services</a>
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
+                    href="#impact">Impact</a>
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
+                    href="#media">Media</a>
+                <a class="text-slate-600 hover:text-slate-900 transition-colors font-headline font-bold"
+                    href="#awards">Awards</a>
+                <a href="{{ url('/') }}"
+                    class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-md font-bold hover:scale-105 transition-transform duration-300">
                     Back to IBSEA
                 </a>
             </div>
@@ -114,169 +120,428 @@
         <section class="relative pt-32 pb-24 px-8 overflow-hidden bg-white" id="home">
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 z-10">
-                    <span class="text-secondary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Chairman IBSEA &amp; Startup Mentor</span>
-                    <h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
+                    <span
+                        class="text-secondary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Chairman
+                        IBSEA &amp; Startup Mentor</span>
+                    <h1
+                        class="text-6xl lg:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tight mb-4">
                         Dr. Anshumaan Singh
                     </h1>
-                    <p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed font-bold">
+                    <p class="text-xl lg:text-3xl text-primary italic font-headline font-bold mb-8">
                         Transforming Visions Into Ventures
                     </p>
-                    <p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed italic border-l-4 border-primary pl-4">
+                    <p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed font-bold border-l-4 border-primary pl-4">
                         “You don’t need more motivation — you need mentorship that works.”
                     </p>
+                    <p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        If you're a startup founder trying to scale, a CEO navigating complexity, or a government executive building a future-ready India — you're in the right place.
+                    </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-md font-bold text-lg shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all">
+                        <a href="#contact"
+                            class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-md font-bold text-lg shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all">
                             Book a Consultation
                         </a>
-                        <a href="#services" class="border border-outline-variant text-on-surface px-8 py-4 rounded-md font-bold text-lg hover:bg-surface-container-low transition-all">
-                            Explore Services
+                        <a href="#services"
+                            class="border border-outline-variant text-on-surface px-8 py-4 rounded-md font-bold text-lg hover:bg-surface-container-low transition-all">
+                            Explore Programs
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-5 relative">
-                    <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"></div>
-                    <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
-                    <div class="relative bg-surface-container rounded-xl overflow-hidden aspect-[4/5] shadow-2xl border flex items-center justify-center">
-                        <img alt="Dr. Anshumaan Singh Professional Portrait" class="w-full h-full object-cover" src="{{ asset('image/chairman.jpg') }}" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBtOfg6TyqMFM6a47h8JDMG28MpoIOFym6i_tKNa6UHkp23LPQwNOKYvQWxLZc4KAPkA7E5z1T1khqWhFGauNq0-mDRJIqV0n8OOtYv17LQT9Wc9NeCAl0ZCSsIpabRfHDxDQVIDgiAtNjN4RxqikDxSSdYKk_yVOl3pxhPIhZbmBeUuJjHiAvGNcZj3u3aBCgcj0FAyz1T8Zc3Du14q6rFhmg0zvCb7KWVA9GQMTTUbyZfpzgxibx99Y8CbuYvNtXO4LNk_mSdFIA'" />
+                    <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl">
+                    </div>
+                    <div
+                        class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl">
+                    </div>
+                    <div class="relative bg-surface-container rounded-xl overflow-hidden aspect-[4/5] shadow-2xl flex items-center justify-center">
+                        <img alt="Dr. Anshumaan Singh Professional Portrait" class="w-full h-full object-cover"
+                            data-alt="Professional portrait of Dr. Anshumaan Singh in executive attire"
+                            src="{{ asset('image/chairman.jpg') }}" onerror="this.src='{{ asset('image/avatar.jpg') }}'" />
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Dynamic Content from Markdown -->
-        <section class="py-24 px-8 bg-surface" id="about">
-            <div class="max-w-4xl mx-auto prose prose-lg md:prose-xl text-on-surface-variant font-body">
-                <h2 class="text-4xl font-headline font-bold mb-8 text-on-surface">🚀 Overview</h2>
-                <p class="mb-4">Dr. Anshumaan Singh is one of India’s most recognized figures in startup mentorship, strategic growth consulting, and leadership development. As the Chairman of the International Business Startup and Entrepreneurs Association (IBSEA), he has dedicated his career to empowering individuals, startups, and institutions to achieve measurable growth and long-term impact.</p>
-                <hr class="my-10 border-outline-variant">
-
-                <h2 class="text-3xl font-headline font-bold mb-6 text-on-surface">🎯 Professional Identity</h2>
-                <p class="mb-4">Dr. Singh works at the intersection of entrepreneurship, leadership, and nation-building. His mission is to transform ideas into scalable ventures while developing future-ready leaders who can contribute to India’s growth.</p>
-                <hr class="my-10 border-outline-variant">
-
-                <h2 class="text-3xl font-headline font-bold mb-6 text-on-surface">📊 Key Achievements</h2>
-                <ul class="list-disc pl-6 space-y-2 mb-8">
-                    <li>Mentored <strong>2.5 lakh+ students</strong> across India</li>
-                    <li>Conducting <strong>10,000+ professional meetings</strong> in the past 5 years</li>
-                    <li>Invited as Guest Speaker by <strong>185+ colleges and universities</strong></li>
-                    <li>Recipient of <strong>180+ national and international awards</strong> including <em>Uttar Pradesh Ratna</em> and <em>Shiksha Ratna</em></li>
-                    <li>Recognized <strong>TEDx Speaker</strong> for thought leadership in entrepreneurship</li>
-                </ul>
-                <hr class="my-10 border-outline-variant">
-
-                <h2 class="text-3xl font-headline font-bold mb-6 text-on-surface">👥 Who He Works With</h2>
-                <ul class="list-disc pl-6 space-y-2 mb-8">
-                    <li><strong>Startup Founders</strong> looking to scale with clarity and speed</li>
-                    <li><strong>CXOs & Chairpersons</strong> seeking strategic growth and alignment</li>
-                    <li><strong>Government & Policy Leaders</strong> building innovation-driven ecosystems</li>
-                    <li><strong>Business Incubators & Accelerators</strong> focused on mentorship-led outcomes</li>
-                </ul>
-                <hr class="my-10 border-outline-variant">
-
-                <h2 class="text-4xl font-headline font-bold mb-8 text-on-surface" id="services">🔧 Services & Expertise</h2>
-                
-                <h3 class="text-2xl font-headline font-bold mb-4 text-primary">🎯 Startup & Business Mentorship</h3>
-                <p class="mb-2">Provides end-to-end guidance for entrepreneurs:</p>
-                <ul class="list-disc pl-6 space-y-2 mb-8">
-                    <li>Idea validation</li>
-                    <li>Market entry strategies</li>
-                    <li>Fundraising frameworks</li>
-                    <li>Customer acquisition</li>
-                    <li>Scaling and execution</li>
-                </ul>
-
-                <h3 class="text-2xl font-headline font-bold mb-4 text-primary">🎯 Executive Coaching</h3>
-                <p class="mb-2">Helps leaders align purpose with performance:</p>
-                <ul class="list-disc pl-6 space-y-2 mb-8">
-                    <li>Strategic clarity</li>
-                    <li>Leadership development</li>
-                    <li>Decision-making frameworks</li>
-                    <li>Breaking leadership stagnation</li>
-                </ul>
-
-                <h3 class="text-2xl font-headline font-bold mb-4 text-primary">🎯 Brand & Image Building</h3>
-                <p class="mb-2">Builds strong personal and professional brands:</p>
-                <ul class="list-disc pl-6 space-y-2 mb-8">
-                    <li>Positioning for CEOs, influencers, and public figures</li>
-                    <li>Authentic brand storytelling</li>
-                    <li>Reputation and visibility enhancement</li>
-                </ul>
-                <hr class="my-10 border-outline-variant">
-
-                <h2 class="text-3xl font-headline font-bold mb-6 text-on-surface" id="impact">🌐 Nation Building Through Entrepreneurship</h2>
-                <p class="mb-4">Dr. Singh plays a significant role in shaping India’s entrepreneurial ecosystem.</p>
-                <p class="mb-2 font-bold">Key Initiatives:</p>
-                <ul class="list-disc pl-6 space-y-2 mb-4">
-                    <li>Organizer of <strong>India@2047 Conference</strong></li>
-                    <li>Organizer of <strong>Bharat Ke Maharathi Awards</strong></li>
-                </ul>
-                <p class="mb-2 font-bold mt-6">IBSEA Impact:</p>
-                <ul class="list-disc pl-6 space-y-2 mb-8">
-                    <li><strong>100+ Mentors onboarded</strong></li>
-                    <li><strong>1,000+ Booster Members</strong></li>
-                    <li><strong>50+ MOUs signed</strong></li>
-                    <li><strong>21 Councils established</strong> to build 21st-century business skills</li>
-                    <li>Leadership structure including <strong>10 State Presidents/Vice Presidents</strong></li>
-                </ul>
-
-                <h2 class="text-3xl font-headline font-bold mb-6 text-on-surface">🎯 Mission & Vision</h2>
-                <div class="bg-primary/5 p-8 rounded-xl border border-primary/20 mb-8">
-                    <p class="mb-4"><strong>Core Mission:</strong><br>To transform youth potential into measurable performance through structured mentorship, entrepreneurial mindset development, and leadership training.</p>
-                    <p><strong>Vision:</strong><br>To establish 100 Centers of Excellence across India, enabling skill-based learning, innovation-driven thinking, and scalable entrepreneurship ecosystems.</p>
-                </div>
-                <hr class="my-10 border-outline-variant">
-
-                <h2 class="text-3xl font-headline font-bold mb-6 text-on-surface" id="media">🎤 Media & Videos</h2>
-                <ul class="list-disc pl-6 space-y-2 mb-4">
-                    <li>Renowned <strong>TEDx Speaker</strong> delivering sessions across top institutions</li>
-                    <li>Known for impactful talks on Entrepreneurship, Leadership, Nation-building, and Youth empowerment</li>
-                </ul>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                    <a href="https://youtu.be/JiTi11TnVKs" target="_blank" class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden relative group">
-                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all flex items-center justify-center">
-                            <span class="material-symbols-outlined text-white text-7xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
-                        </div>
-                        <img alt="Video" class="w-full h-full object-cover" src="https://img.youtube.com/vi/JiTi11TnVKs/maxresdefault.jpg" />
-                    </a>
-                    <a href="https://youtu.be/DOWksCIv8FY" target="_blank" class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden relative group">
-                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all flex items-center justify-center">
-                            <span class="material-symbols-outlined text-white text-7xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
-                        </div>
-                        <img alt="Video" class="w-full h-full object-cover" src="https://img.youtube.com/vi/DOWksCIv8FY/maxresdefault.jpg" />
-                    </a>
+        <!-- Statue Metrics (About Summary) -->
+        <section class="bg-tertiary py-20 px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center md:text-left">
+                        <div class="text-4xl lg:text-5xl font-headline font-extrabold text-white statue-metric mb-2">
+                            2.5L+</div>
+                        <div class="text-primary-container font-headline font-bold text-sm tracking-wider uppercase">
+                            Students Mentored</div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <div class="text-4xl lg:text-5xl font-headline font-extrabold text-white statue-metric mb-2">
+                            10k+</div>
+                        <div class="text-primary-container font-headline font-bold text-sm tracking-wider uppercase">
+                            Meetings Conducted</div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <div class="text-4xl lg:text-5xl font-headline font-extrabold text-white statue-metric mb-2">
+                            185+</div>
+                        <div class="text-primary-container font-headline font-bold text-sm tracking-wider uppercase">
+                            Institutions Reached</div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <div class="text-4xl lg:text-5xl font-headline font-extrabold text-white statue-metric mb-2">
+                            180+</div>
+                        <div class="text-primary-container font-headline font-bold text-sm tracking-wider uppercase">
+                            Global Awards</div>
+                    </div>
                 </div>
             </div>
         </section>
-
+        <!-- About Section -->
+        <section class="py-24 px-8 bg-surface" id="about">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+                            <img alt="Corporate Workshop" class="rounded-lg object-cover h-64 w-full"
+                                data-alt="Dr. Singh conducting a corporate workshop session"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmNdsa423zpfIS0yMO7zQ1aiTparhgPEsTG7gJfuwqv_TMF1F_ceqJTWncdqQBRT14ftSVkBRPTGYD9Rqeba93nNoRRh9lUKDPJdZ8pIAO_8Yo2yGFgpDuXjFbTQLxLd3g57oAqtU9uFp3Z6DVLug_yRZSycwlULvU0E_CQklzC9f_0_P_qH02RufsVFnrCleMXRuboJ6nPYaSZ5YE-PtIpLEqxiMWxXhyTkP8sJRLnePiC5Kt78H0kBqs1ZG8KC0UU2IPBo6-dTE" />
+                        </div>
+                        <div class="bg-surface-container-lowest p-1 rounded-lg shadow-sm mt-8">
+                            <img alt="Leadership Speech" class="rounded-lg object-cover h-64 w-full"
+                                data-alt="Dr. Singh delivering a keynote speech at a summit"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUj20ci5zIMQ9TT5byH4_OHt5MLSCRrPsFUlzX5qgOQ6oX5XVFS1XWUN_fkU6xZrVbnovi7SeWDtGSGc2jYyGVpZOUZ605jQ4SZziBppGuw6SlanmShaFgfjMVf-5amHEeZwzzox50ClqgrKBJf0EJmnox_2GV_EIeqhRGB95iWGfKar9YOvSNgahgD5OZ7VwCbUYhBwxT3QSsKXzG-TAWogTPSQPzOdnB1lmVu1w1i8-kfJL8rWodlzY6t9SdPpcK9VYtk6YIHwQ" />
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-headline font-bold mb-8 text-on-surface">The 7-Year Journey of <span
+                            class="text-tertiary">Impact</span></h2>
+                    <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+                        <p>With a vision to redefine the startup ecosystem in India, Dr. Anshumaan Singh has dedicated
+                            nearly a decade to architecting success for students and entrepreneurs alike.</p>
+                        <p>As the Chairman of IBSEA, he bridges the gap between academic theory and real-world
+                            industrial demand, fostering a culture of innovation that aligns with the <span
+                                class="font-bold text-on-surface">India@2047</span> vision.</p>
+                        <div class="pt-4">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="material-symbols-outlined text-secondary"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span>National record for most workshops in a single calendar year</span>
+                            </div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="material-symbols-outlined text-secondary"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span>Architect of 50+ MoUs between global institutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section (Modern Cards) -->
+        <section class="py-24 px-8 bg-white" id="services">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl font-headline font-bold mb-4">Expertise That <span
+                                class="text-primary">Scales</span></h2>
+                        <p class="text-on-surface-variant text-lg">Specialized programs designed to transform leaders
+                            and build sustainable business models.</p>
+                    </div>
+                    <a class="text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform"
+                        href="#contact">
+                        View All Services <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="group bg-surface-container-lowest p-10 rounded-xl relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-slate-100">
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="w-16 h-16 bg-primary-container/20 rounded-lg flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-4">Startup Mentorship</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-4">Strategic guidance from ideation to series
+                            funding. Focused on building lean, resilient, and scalable ventures.</p>
+                        <ul class="text-sm space-y-2 text-on-surface text-opacity-80">
+                            <li><span class="text-primary font-bold mr-1">→</span> Idea validation</li>
+                            <li><span class="text-primary font-bold mr-1">→</span> Market entry strategies</li>
+                            <li><span class="text-primary font-bold mr-1">→</span> Fundraising frameworks</li>
+                        </ul>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="group bg-surface-container-lowest p-10 rounded-xl relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-slate-100">
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-secondary opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div
+                            class="w-16 h-16 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-secondary text-3xl">leaderboard</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-4">Executive Coaching</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-4">High-performance training for CXOs and
+                            founders to master decision-making and organizational culture.</p>
+                        <ul class="text-sm space-y-2 text-on-surface text-opacity-80">
+                            <li><span class="text-secondary font-bold mr-1">→</span> Strategic clarity</li>
+                            <li><span class="text-secondary font-bold mr-1">→</span> Leadership development</li>
+                            <li><span class="text-secondary font-bold mr-1">→</span> Breaking leadership stagnation</li>
+                        </ul>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="group bg-surface-container-lowest p-10 rounded-xl relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-slate-100">
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-tertiary opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div
+                            class="w-16 h-16 bg-tertiary-container/20 rounded-lg flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-tertiary text-3xl">star</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold mb-4">Brand Building</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-4">Personal and corporate image transformation
+                            to establish global authority and market dominance.</p>
+                        <ul class="text-sm space-y-2 text-on-surface text-opacity-80">
+                            <li><span class="text-tertiary font-bold mr-1">→</span> Public figure positioning</li>
+                            <li><span class="text-tertiary font-bold mr-1">→</span> Authentic brand storytelling</li>
+                            <li><span class="text-tertiary font-bold mr-1">→</span> Visibility enhancement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Impact Section -->
+        <section class="py-24 px-8 bg-surface-container-low" id="impact">
+            <div class="max-w-7xl mx-auto text-center mb-20">
+                <h2 class="text-4xl font-headline font-bold mb-4">A National <span
+                        class="text-secondary">Footprint</span></h2>
+                <p class="text-on-surface-variant text-lg">Building the backbone of a developed India through strategic
+                    partnerships.</p>
+            </div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-white p-12 rounded-2xl shadow-sm flex flex-col items-center text-center">
+                    <span class="text-6xl font-headline font-extrabold text-tertiary mb-4">100+</span>
+                    <p class="font-headline font-bold text-on-surface tracking-wide uppercase">Expert Mentors</p>
+                    <p class="text-on-surface-variant mt-2 text-sm">Industry leaders across 20+ sectors</p>
+                </div>
+                <div class="bg-white p-12 rounded-2xl shadow-sm flex flex-col items-center text-center">
+                    <span class="text-6xl font-headline font-extrabold text-tertiary mb-4">1000+</span>
+                    <p class="font-headline font-bold text-on-surface tracking-wide uppercase">Active Members</p>
+                    <p class="text-on-surface-variant mt-2 text-sm">Innovators driving the startup economy</p>
+                </div>
+                <div class="bg-white p-12 rounded-2xl shadow-sm flex flex-col items-center text-center">
+                    <span class="text-6xl font-headline font-extrabold text-tertiary mb-4">50+</span>
+                    <p class="font-headline font-bold text-on-surface tracking-wide uppercase">Institutional MOUs</p>
+                    <p class="text-on-surface-variant mt-2 text-sm">Global bridges for student exchange</p>
+                </div>
+            </div>
+        </section>
+        <!-- Mission Section -->
+        <section class="py-24 px-8 bg-white relative">
+            <div
+                class="max-w-7xl mx-auto bg-slate-900 rounded-[2rem] p-12 lg:p-20 text-white flex flex-col lg:flex-row gap-16 overflow-hidden">
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent"></div>
+                <div class="lg:w-3/5 relative z-10">
+                    <h2 class="text-4xl lg:text-5xl font-headline font-extrabold mb-8 leading-tight">
+                        Transforming Youth Potential into <span
+                            class="text-primary-container underline decoration-primary-container/30 decoration-8 underline-offset-8">Performance</span>
+                    </h2>
+                    <p class="text-slate-300 text-xl leading-relaxed mb-10 italic">
+                        "Our goal is to establish 100 Centers of Excellence across India by 2030, ensuring that every
+                        Tier-2 and Tier-3 city becomes a hub of entrepreneurial excellence."
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="bg-white/10 px-6 py-4 rounded-xl border border-white/10">
+                            <span
+                                class="text-primary-container font-headline font-bold text-2xl block">India@2047</span>
+                            <span class="text-xs text-slate-400 tracking-widest uppercase">The Vision</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/5 flex items-center justify-center relative">
+                    <div
+                        class="w-full aspect-square border-2 border-white/5 rounded-full flex items-center justify-center p-8">
+                        <div
+                            class="w-full aspect-square border-2 border-primary/20 rounded-full flex items-center justify-center p-8">
+                            <div
+                                class="bg-primary-container text-on-primary-container w-full aspect-square rounded-full flex flex-col items-center justify-center p-6 text-center shadow-2xl">
+                                <span class="text-4xl font-headline font-extrabold">100</span>
+                                <span class="text-sm font-bold uppercase tracking-tighter mt-1">Centers of Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Media & Speaking -->
+        <section class="py-24 px-8 bg-surface" id="media">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center gap-4 mb-16">
+                    <div class="h-1 w-12 bg-primary"></div>
+                    <h2 class="text-4xl font-headline font-bold">Media &amp; Global Speaking</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                            <div class="flex items-start gap-6">
+                                <div class="bg-red-50 text-red-600 p-4 rounded-lg">
+                                    <span class="material-symbols-outlined text-4xl">mic</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-headline font-bold mb-2">TEDx Speaker</h3>
+                                    <p class="text-on-surface-variant">Sharing insights on the "Future of
+                                        Entrepreneurship" to a global audience of millions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://youtu.be/JiTi11TnVKs" target="_blank" class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden relative group shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-white text-7xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
+                            </div>
+                            <img alt="TEDx Talk" class="w-full h-full object-cover"
+                                src="https://img.youtube.com/vi/JiTi11TnVKs/maxresdefault.jpg" />
+                        </a>
+                    </div>
+                    <div class="space-y-8">
+                        <a href="https://youtu.be/DOWksCIv8FY" target="_blank" class="block aspect-video bg-slate-200 rounded-2xl overflow-hidden relative group shadow-lg">
+                            <div
+                                class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-white text-7xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
+                            </div>
+                            <img alt="Keynote Speech" class="w-full h-full object-cover"
+                                src="https://img.youtube.com/vi/DOWksCIv8FY/maxresdefault.jpg" />
+                        </a>
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                            <div class="flex items-start gap-6">
+                                <div class="bg-blue-50 text-tertiary p-4 rounded-lg">
+                                    <span class="material-symbols-outlined text-4xl">newspaper</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-headline font-bold mb-2">Industrial Recognition</h3>
+                                    <p class="text-on-surface-variant">Featured in leading publications for pioneering
+                                        work in startup mentoring and policy advocacy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Awards Grid -->
+        <section class="py-24 px-8 bg-white" id="awards">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-headline font-bold mb-4">Honors &amp; Accolades</h2>
+                    <p class="text-on-surface-variant">Recognized at the highest levels for excellence in education and
+                        mentorship.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="bg-surface-container-low p-8 rounded-xl text-center border-b-4 border-primary group hover:bg-white hover:shadow-xl transition-all">
+                        <span class="material-symbols-outlined text-primary text-5xl mb-6">workspace_premium</span>
+                        <h4 class="font-headline font-bold text-lg mb-2">Uttar Pradesh Ratna</h4>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-widest">State Recognition</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-8 rounded-xl text-center border-b-4 border-secondary group hover:bg-white hover:shadow-xl transition-all">
+                        <span class="material-symbols-outlined text-secondary text-5xl mb-6">school</span>
+                        <h4 class="font-headline font-bold text-lg mb-2">Shiksha Ratna</h4>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-widest">Academic Excellence</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-8 rounded-xl text-center border-b-4 border-tertiary group hover:bg-white hover:shadow-xl transition-all">
+                        <span class="material-symbols-outlined text-tertiary text-5xl mb-6">military_tech</span>
+                        <h4 class="font-headline font-bold text-lg mb-2">Leadership Excellence</h4>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-widest">Global Summit</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-8 rounded-xl text-center border-b-4 border-orange-400 group hover:bg-white hover:shadow-xl transition-all">
+                        <span class="material-symbols-outlined text-orange-400 text-5xl mb-6">public</span>
+                        <h4 class="font-headline font-bold text-lg mb-2">Global Impact Award</h4>
+                        <p class="text-xs text-on-surface-variant uppercase tracking-widest">International Forum</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Collaboration Section -->
+        <section class="py-24 px-8 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
+                <div class="lg:w-1/3">
+                    <h2 class="text-4xl font-headline font-bold mb-6">Strategic Partnerships</h2>
+                    <p class="text-slate-400 leading-relaxed">Collaborating with the visionaries of today to build the
+                        industries of tomorrow.</p>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-2 gap-8">
+                    <div class="border-l-2 border-primary/30 pl-8 py-4">
+                        <h4 class="text-xl font-headline font-bold mb-2">Startup Founders</h4>
+                        <p class="text-slate-500 text-sm">Equity-based mentorship and strategic scaling models.</p>
+                    </div>
+                    <div class="border-l-2 border-secondary/30 pl-8 py-4">
+                        <h4 class="text-xl font-headline font-bold mb-2">Government Leaders</h4>
+                        <p class="text-slate-500 text-sm">Policy framework and socio-economic growth consulting.</p>
+                    </div>
+                    <div class="border-l-2 border-tertiary/30 pl-8 py-4">
+                        <h4 class="text-xl font-headline font-bold mb-2">CXOs &amp; Executives</h4>
+                        <p class="text-slate-500 text-sm">Transformational leadership and cultural architecture.</p>
+                    </div>
+                    <div class="border-l-2 border-orange-300/30 pl-8 py-4">
+                        <h4 class="text-xl font-headline font-bold mb-2">Incubators</h4>
+                        <p class="text-slate-500 text-sm">Structuring sustainable acceleration programs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Contact Section -->
-        <section class="py-24 px-8 bg-surface-container-low" id="contact">
+        <section class="py-24 px-8 bg-surface" id="contact">
             <div class="max-w-7xl mx-auto">
                 <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
                     <div class="lg:w-1/2 p-12 lg:p-20">
-                        <h2 class="text-4xl font-headline font-bold mb-8">Let's Build the <span class="text-primary">Future</span></h2>
-                        <h3 class="text-xl font-bold text-on-surface mb-4">🤝 Collaboration Invitation</h3>
-                        <p class="mb-4 text-on-surface-variant">Dr. Anshumaan Singh invites collaboration with individuals and organizations ready to launch stronger, scale faster, and lead better.</p>
-                        <ul class="mb-8 text-on-surface-variant list-disc pl-6">
-                            <li>Sustainable systems</li>
-                            <li>Strategic growth frameworks</li>
-                            <li>Long-term impact</li>
-                        </ul>
+                        <h2 class="text-4xl font-headline font-bold mb-8">Let's Build the <span
+                                class="text-primary">Future</span></h2>
+                        <form class="space-y-6" action="mailto:contact@anshumaansingh.com" method="post" enctype="text/plain">
+                            <div>
+                                <label
+                                    class="block text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-2">Name</label>
+                                <input
+                                    class="w-full bg-surface-container-low border-none border-b-2 border-outline focus:ring-0 focus:border-primary transition-all p-4"
+                                    placeholder="John Doe" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-2">Email</label>
+                                <input
+                                    class="w-full bg-surface-container-low border-none border-b-2 border-outline focus:ring-0 focus:border-primary transition-all p-4"
+                                    placeholder="john@example.com" type="email" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-2">Message</label>
+                                <textarea
+                                    class="w-full bg-surface-container-low border-none border-b-2 border-outline focus:ring-0 focus:border-primary transition-all p-4"
+                                    placeholder="How can I help you?" rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-primary text-white font-bold py-5 rounded-md hover:bg-on-primary-container transition-colors text-lg cursor-pointer">Send
+                                Message</button>
+                        </form>
                     </div>
                     <div class="lg:w-1/2 bg-tertiary p-12 lg:p-20 text-white flex flex-col justify-between">
                         <div>
                             <h3 class="text-3xl font-headline font-bold mb-10">Direct Reach</h3>
                             <div class="space-y-8">
                                 <div class="flex items-center gap-6">
-                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
                                         <span class="material-symbols-outlined">mail</span>
                                     </div>
                                     <div>
-                                        <p class="text-white/60 text-sm uppercase font-bold">Email</p>
+                                        <p class="text-white/60 text-sm uppercase font-bold">Email Me</p>
                                         <p class="text-lg">contact@anshumaansingh.com</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-6">
-                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
                                         <span class="material-symbols-outlined">public</span>
                                     </div>
                                     <div>
@@ -285,24 +550,26 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-6">
-                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
                                         <span class="material-symbols-outlined">map</span>
                                     </div>
                                     <div>
-                                        <p class="text-white/60 text-sm uppercase font-bold">Location</p>
-                                        <p class="text-lg">Delhi, India</p>
+                                        <p class="text-white/60 text-sm uppercase font-bold">Headquarters</p>
+                                        <p class="text-lg">New Delhi, India</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="pt-20">
-                            <p class="text-white/60 font-bold mb-6">SOCIAL CONNECT</p>
+                            <p class="text-white/60 font-bold mb-6 tracking-widest text-sm">SOCIAL CONNECT</p>
                             <div class="flex gap-6">
-                                <a class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center hover:bg-primary transition-all group" href="https://www.linkedin.com/in/anshumaansinghofficial" target="_blank">
-                                    <span class="text-white text-sm font-bold">In</span>
+                                <a class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center hover:bg-primary transition-all group"
+                                    href="https://www.linkedin.com/in/anshumaansinghofficial" target="_blank">
+                                    <span class="text-white font-bold group-hover:scale-110 transition-transform">In</span>
                                 </a>
-                                <a class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center hover:bg-primary transition-all group" href="https://www.facebook.com/share/15TKHLN6fJ/" target="_blank">
-                                    <span class="text-white text-sm font-bold">Fb</span>
+                                <a class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center hover:bg-primary transition-all group"
+                                    href="https://www.facebook.com/share/15TKHLN6fJ/" target="_blank">
+                                    <span class="text-white font-bold group-hover:scale-110 transition-transform">Fb</span>
                                 </a>
                             </div>
                         </div>
@@ -316,27 +583,42 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
             <div class="md:col-span-1">
                 <div class="text-lg font-bold text-white uppercase tracking-widest mb-6">Dr. Anshumaan Singh</div>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6 font-body">Architecting the future of Indian entrepreneurship. Building leaders, scaling ventures, creating impact.</p>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6 font-body">Architecting the future of Indian
+                    entrepreneurship. Building leaders, scaling ventures, creating impact.</p>
             </div>
             <div>
                 <h4 class="text-white font-medium mb-6">Quick Links</h4>
                 <ul class="space-y-4">
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block" href="https://www.linkedin.com/in/anshumaansinghofficial" target="_blank">LinkedIn</a></li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block" href="https://www.facebook.com/share/15TKHLN6fJ/" target="_blank">Facebook</a></li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block" href="#contact">Contact</a></li>
+                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block"
+                            href="https://www.linkedin.com/in/anshumaansinghofficial" target="_blank">LinkedIn</a></li>
+                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block"
+                            href="https://www.facebook.com/share/15TKHLN6fJ/" target="_blank">Facebook</a></li>
+                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 duration-300 block"
+                            href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-medium mb-6">Initiatives</h4>
                 <ul class="space-y-4">
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="{{ url('/') }}">IBSEA India</a></li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="#services">Startup Mentorship</a></li>
-                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="#impact">Leadership Summit</a></li>
+                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="{{ url('/') }}">IBSEA India</a>
+                    </li>
+                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="#services">Startup
+                            Mentorship</a></li>
+                    <li><a class="text-slate-500 hover:text-orange-400 transition-colors block" href="#impact">National Ecosystem</a></li>
                 </ul>
             </div>
+            <div>
+                 <h4 class="text-white font-medium mb-6">Subscribe</h4>
+                 <p class="text-slate-400 text-xs mb-4">Subscribe for monthly leadership insights.</p>
+                 <div class="flex border-b border-slate-700 pb-2">
+                     <input class="bg-transparent border-none text-white focus:ring-0 w-full text-sm" placeholder="Email Address" type="email" />
+                     <button class="text-orange-400"><span class="material-symbols-outlined">arrow_forward</span></button>
+                 </div>
+             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="font-bold text-sm text-slate-400">© 2026 Dr. Anshumaan Singh. India@2047</p>
+        <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-['Inter'] text-sm text-slate-400">© 2026 Dr. Anshumaan Singh. All Rights Reserved.</p>
             <div class="flex gap-8">
                 <span class="text-orange-500 font-bold text-xs tracking-widest uppercase">Leadership</span>
                 <span class="text-orange-500 font-bold text-xs tracking-widest uppercase">Innovation</span>
@@ -345,4 +627,5 @@
         </div>
     </footer>
 </body>
+
 </html>
