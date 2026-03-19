@@ -23,6 +23,6 @@ class Testimonial extends Model
      */
     public function getImageUrlAttribute()
     {
-        return $this->image_path ? asset($this->image_path) : asset('assets/images/placeholder-user.png');
+        return $this->image_path ? asset($this->image_path) : asset('image/avatar.jpg');
     }
 }
